@@ -1,0 +1,47 @@
+{
+    "enabled": true,
+
+    "probChangesEnabled": true,
+
+    "lightBleed": {
+        "damageMult": 7,
+        "priceMult": 10,
+
+        "prob": {
+            "T": 0.05,
+            "K": 0.25,
+            "B": 0.1
+        }
+    },
+    "heavyBleed": {
+        "damageMult": 7,
+        "priceMult": 10,
+
+        "prob": {
+            "T": 0.08,
+            "K": 0.3,
+            "B": 0.1
+        }
+    },
+
+    "fracture": {
+        "priceMult": 10,
+
+        "bulletProb": {
+            "T": 0.1,
+            "K": 0.8,
+            "B": -0.2
+        },
+
+        "fallProb": {
+            "T": 0.05,
+            "K": 1,
+            "B": -0.1
+        }
+    },
+
+    "toxin": {
+        "damageMult": 10,
+        "priceMult": 10
+    }
+}

@@ -1,0 +1,1134 @@
+{
+    "enabled": true,
+
+    "largeMagLoadPercent": -105,
+    "largeLoadMultiplier": 3,
+    "magLoadPercent": -25,
+    "magLoadMultiplier": 2,
+
+    "items": [
+
+        {
+            "id": "5aaa5e60e5b5b000140293d6",
+            "name": "GEN M3 STANAG 5.56x45mm R-10",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5448c1d04bdc2dff2f8b4569",
+            "name": "GEN M3 STANAG 5.56x45mm R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "55d4887d4bdc2d962f8b4570",
+            "name": "STANAG 5.56x45mm R-30",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "630e1adbbd357927e4007c09",
+            "name": "AUG 5.56x45mm R-10",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "62e7c98b550c8218d602cbb4",
+            "name": "AUG 5.56x45mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "630e295c984633f1fb0e7c30",
+            "name": "AUG 5.56x45mm R-42",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5c6d450c2e221600114c997d",
+            "name": "HK PM GEN.2 STANAG 5.56x45mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "62307b7b10d2321fa8741921",
+            "name": "G36 5.56x45mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "55802d5f4bdc2dac148b458e",
+            "name": "GEN M3 STANAG 5.56x45mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5d1340cad7ad1a0b0b249869",
+            "name": "GEN M3 STANAG 5.56x45mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },   
+        {
+            "id": "5ac66c5d5acfc4001718d314",
+            "name": "6L29 5.56x45mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },  
+        {
+            "id": "61840bedd92c473c77021635",
+            "name": "MK16 5.56x45mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "61840d85568c120fdd2962a5",
+            "name": "MK16 5.56x45mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },        
+        {
+            "id": "544a378f4bdc2d30388b4567",
+            "name": "GEN M3 STANAG 5.56x45mm R-40",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5d1340bdd7ad1a0e8d245aab",
+            "name": "GEN M3 STANAG 5.56x45mm R-40",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5d1340b3d7ad1a0b52682ed7",
+            "name": "GEN M3 STANAG 5.56x45mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "6241c2c2117ad530666a5108",
+            "name": "GEN M3 STANAG 5.56x45mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5aaa5dfee5b5b000140293d3",
+            "name": "GEN M3 STANAG 5.56x45mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5c6d42cb2e2216000e69d7d1",
+            "name": "HK POLY STANAG 5.56x45mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5c05413a0db834001c390617",
+            "name": "HK STEEL STANAG 5.56x45mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5c0548ae0db834001966a3c2",
+            "name": "C-10 AK 5.56x45mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5c6592372e221600133e47d7",
+            "name": "MAG5-100 STANAG 5.56x45mm R-100",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "5c6d46132e221601da357d56",
+            "name": "BATTLEMAG STANAG 5.56x45mm R-30",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "59c1383d86f774290a37e0ca",
+            "name": "PMAG D-60 STANAG 5.56x45mm R-60",
+            "rarity": "5",
+            "magLoadPercent": -80
+        },
+        {
+            "id": "544a37c44bdc2d25388b4567",
+            "name": "MAG5-60 STANAG 5.56x45mm R-60",
+            "rarity": "5",
+            "magLoadPercent": -80
+        },
+
+
+
+        {
+            "id": "587df3a12459772c28142567",
+            "name": "SKS INT 7.62x39mm R-10",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "587df583245977373c4f1129",
+            "name": "SKS-A5 7.62x39mm R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "61695095d92c473c7702147a",
+            "name": "KCI SKS 7.62x39mm R-75",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5c5970672e221602b21d7855",
+            "name": "SKS AALVX 7.62x39mm R-35",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5b1fd4e35acfc40018633c39",
+            "name": "AK AL 7.62x39mm R-10",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "59e5d83b86f7745aed03d262",
+            "name": "AK RIBBED 7.62x39mm R-10",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "59d625f086f774661516605d",
+            "name": "AK55 7.62x39mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5a01c29586f77474660c694c",
+            "name": "6L10 7.62x39mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "59d6272486f77466146386ff",
+            "name": "GEN M3 7.62x39mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5e21a3c67e40bd02257a008a",
+            "name": "BANANA GEN M3 7.62x39mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "6272874a6c47bd74f92e2087",
+            "name": "ULTIMAG 7.62x39mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "59fafc9386f774067d462453",
+            "name": "AK30 FDE 7.62x39mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "59fafc5086f7740dbe19f6c3",
+            "name": "AK30 7.62x39mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5a0060fc86f7745793204432",
+            "name": "AKMS AL 7.62x39mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "59e5f5a486f7746c530b3ce2",
+            "name": "6P2 SB-11 7.62x39mm R-40",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5b1fb3e15acfc4001637f068",
+            "name": "6P2 BAK 7.62x39mm R-40",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5cbdc23eae9215001136a407",
+            "name": "MOLOT 7.62x39mm R-75",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5cfe8010d7ad1a59283b14c6",
+            "name": "X-47 7.62x39mm R-60",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "5ac66bea5acfc43b321d4aec",
+            "name": "AK-103 7.62x39mm R-30",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "5c6175362e221600133e3b94",
+            "name": "AK-A-16 7.62x39mm R-73",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+
+
+
+        {
+            "id": "55d4837c4bdc2d1d4e8b456c",
+            "name": "SAIGA 545 5.45x39mm R-10",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "564ca99c4bdc2d16268b4589",
+            "name": "6L20 5.45x39mm R-30",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "55d480c04bdc2d1d4e8b456a",
+            "name": "6L23 5.45x39mm R-30",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5cbdaf89ae9215000e5b9c94",
+            "name": "6L23 PLUM 5.45x39mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5aaa4194e5b5b055d06310a5",
+            "name": "GEN M3 5.45x39mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "55d481904bdc2d8c2f8b456a",
+            "name": "6L23 PLUM 5.45x39mm R-45",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "55d482194bdc2d1d4e8b456b",
+            "name": "6L31 5.45x39mm R-60",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "564ca9df4bdc2d35148b4569",
+            "name": "6L18 5.45x39mm R-45",
+            "rarity": "5",
+            "magLoadPercent": -80
+        },
+        {
+            "id": "5bed625c0db834001c062946",
+            "name": "RPK-16 DRUM 5.45x39mm R-95",
+            "rarity": "5",
+            "magLoadPercent": -80
+        },
+
+
+
+        {
+            "id": "5a9e81fba2750c00164f6b11",
+            "name": "SR3M 9x39mm R-30",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+
+
+
+        {
+            "id": "628120fd5631d45211793c9f",
+            "name": "AXMC 338 8.6x70mm LM R-10",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+
+
+
+        {
+            "id": "5c503ac82e221602b21d6e9a",
+            "name": "VPO101 7.62x51mm R-5",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5c503ad32e2216398b5aada2",
+            "name": "VPO101 7.62x51mm R-10",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5b7bef1e5acfc43d82528402",
+            "name": "SA58/FAL 7.62x51mm R-10",
+            "rarity": "1",
+            "magLoadPercent": -40
+        }, 
+        {
+            "id": "5b099ac65acfc400186331e1",
+            "name": "SA58/FAL 7.62x51mm R-20",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5b7c2d1d5acfc43d1028532a",
+            "name": "SA58 MMW 7.62x51mm R-20",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5b7bef5d5acfc43bca7067a3",
+            "name": "SA58/FAL 7.62x51mm R-30",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "5b7d37845acfc400170e2f87",
+            "name": "L1A1 7.62x51mm R-30",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "5b7bef9c5acfc43d102852ec",
+            "name": "X-FAL 7.62x51mm R-60",
+            "rarity": "5",
+            "magLoadPercent": -80
+        },
+        {
+            "id": "5df8f535bb49d91fb446d6b0",
+            "name": "KAC 7.62x51mm R-10",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5888988e24597752fe43a6fa",
+            "name": "DVL-10 7.62x51mm R-10",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5df8f541c41b2312ea3335e3",
+            "name": "KAC 7.62x51mm R-20",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5aaf8a0be5b5b00015693243",
+            "name": "M1A 7.62x51mm R-20",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5d25a4a98abbc30b917421a4",
+            "name": "AICS 7.62x51mm R-5",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5d25a6538abbc306c62e630d",
+            "name": "AICS 7.62x51mm R-10",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5d25a6a48abbc306c62e6310",
+            "name": "MDT 7.62x51mm R-12",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5bfea7ad0db834001c38f1ee",
+            "name": "WYATT 7.62x51mm R-5",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5bfeaa0f0db834001b734927",
+            "name": "WYATT 7.62x51mm R-10",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5d25af8f8abbc3055079fec5",
+            "name": "AA-70 7.62x51mm R-10",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5cf12a15d7f00c05464b293f",
+            "name": "AA-70 7.62x51mm R-20",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "5ce69cbad7f00c00b61c5098",
+            "name": "PMAG AC 7.62x51mm R-5",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5d25a7b88abbc3054f3e60bc",
+            "name": "PMAG AC 7.62x51mm R-10",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "618168dc8004cc50514c34fc",
+            "name": "MK17 7.62x51mm R-20",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "617130016c780c1e710c9a24",
+            "name": "417 7.62x51mm R-10",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5df25b6c0b92095fd441e4cf",
+            "name": "T-6000M 7.62x51mm R-5",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "617131a4568c120fdd29482d",
+            "name": "417 7.62x51mm R-20",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "5addcce35acfc4001a5fc635",
+            "name": "M14 7.62x51mm R-30",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "5addccf45acfc400185c2989",
+            "name": "X-14 7.62x51mm R-60",
+            "rarity": "5",
+            "magLoadPercent": -80
+        },
+        {
+            "id": "6183d53f1cb55961fa0fdcda",
+            "name": "MK17 7.62x51mm R-20",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "5a3501acc4a282000d72293a",
+            "name": "PMAG 7.62x51mm R-20",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "628120f210e26c1f344e6558",
+            "name": "AXMC 308 7.62x51mm R-10",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+
+
+
+        {
+            "id": "5ae0973a5acfc4001562206c",
+            "name": "MOSIN 7.62x54R R-5",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5bae13ded4351e44f824bf38",
+            "name": "MOSIN ARCH 7.62x54R R-10",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "559ba5b34bdc2d1f1a8b4582",
+            "name": "SV-98 7.62x54R R-10",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5c471c442e221602b542a6f8",
+            "name": "SVD 7.62x54R R-10",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5c88f24b2e22160bc12c69a6",
+            "name": "SVD 7.62x54R R-20",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+
+
+
+        {
+            "id": "5fc23426900b1d5091531e15",
+            "name": "MK-18 .338 R-10",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+
+
+
+        {
+            "id": "5de653abf76fdc1ce94a5a2a",
+            "name": "VPO215 .366 R-4",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+
+
+
+        {
+            "id": "5caf1041ae92157c28402e3f",
+            "name": "ASH-12 12.7x55mm R-10",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5caf1109ae9215753c44119f",
+            "name": "ASH-12 12.7x55mm R-20",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+
+
+
+        {
+            "id": "57d14e1724597714010c3f4b",
+            "name": "PP91 9x18mm R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "57d1519e24597714373db79d",
+            "name": "PP91 9x18mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5a17fb03fcdbcbcae668728f",
+            "name": "APS 9x18mm R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5448c12b4bdc2d02308b456f",
+            "name": "PM 9x18mm R-8",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "55d485be4bdc2d962f8b456f",
+            "name": "PM DRUM 9x18mm R-84",
+            "rarity": "5",
+            "magLoadPercent": -80
+        },
+
+
+
+        {
+            "id": "571a29dc2459771fb2755a6a",
+            "name": "TT-105 7.62x25mm Tokarev R-8",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5ea034eb5aad6446a939737b",
+            "name": "PPSH 7.62x25mm Tokarev R-35",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5ea034f65aad6446a939737e",
+            "name": "PPSH 7.62x25mm Tokarev R-71",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+
+
+
+        {
+            "id": "5d3eb5eca4b9363b1f22f8e4",
+            "name": "5-7 5.7x28mm R-20",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5cc70093e4a949033c734312",
+            "name": "P90 5.7x28mm R-60",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+
+
+
+        {
+            "id": "5e81c4ca763d9f754677befa",
+            "name": "1911 11.43x23mm R-7",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5ef3448ab37dfd6af863525c",
+            "name": "MEC-GAR 11.43x23mm R-11",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5f3e77b26cda304dcc634057",
+            "name": "WILSON 11.43x23mm R-7",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5fc3e466187fea44d52eda90",
+            "name": "UMP 45 11.43x23mm R-25",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "6193d338de3cdf1d2614a6fc",
+            "name": "USP45 11.43x23mm R-12",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "6193d3149fb0c665d5490e32",
+            "name": "USP45T 11.43x23mm R-12",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5fb651b52b1b027b1f50bcff",
+            "name": "GLOCK.45 11.43x23mm R-13",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5fb651dc85f90547f674b6f4",
+            "name": "G30 MagEx 11.43x23mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+
+
+
+        {
+            "id": "5998529a86f774647f44f421",
+            "name": "SB.7 9x19mm R-10",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "599860ac86f77436b225ed1a",
+            "name": "PP-19-01 9x19mm R-30",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5c0673fb0db8340023300271",
+            "name": "SG-919 9x19mm R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5c0672ed0db834001b7353f3",
+            "name": "SG-919 9x19mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5c5db6552e2216001026119d",
+            "name": "MPX 9x19mm R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5894a05586f774094708ef75",
+            "name": "MPX 9x19mm R-30",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5c5db6652e221600113fba51",
+            "name": "MPX TTI 9x19mm R-41",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5c5db6742e2216000f1b2852",
+            "name": "MPX DRUM 9x19mm R-60",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "5de8e8dafd6b4e6e2276dc32",
+            "name": "MP9 9x19mm R-15",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5de8ea8ffd6b4e6e2276dc35",
+            "name": "MP9 9x19mm R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5de8eaadbbaf010b10528a6d",
+            "name": "MP9 9x19mm R-25",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5de8eac42a78646d96665d91",
+            "name": "MP9 9x19mm R-30",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "56d59948d2720bb7418b4582",
+            "name": "P226 9x19mm R-15",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5c920e902e221644f31c3c99",
+            "name": "P226 9x19mm R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "602286df23506e50807090c6",
+            "name": "PL15 9x19mm R-15",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "576a5ed62459771e9c2096cb",
+            "name": "MP-443 9x19mm R-18",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5cadc2e0ae9215051e1c21e7",
+            "name": "M9A3 9x19mm R-17",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5d2f213448f0355009199284",
+            "name": "MP5 9x19mm R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5926c3b286f774640d189b6b",
+            "name": "MP5 9x19mm R-30",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5a351711c4a282000b1521a4",
+            "name": "X-5 MP5 9x19mm R-60",
+            "rarity": "5",
+            "magLoadPercent": -80
+        },
+        {
+            "id": "5a718b548dc32e000d46d262",
+            "name": "GLOCK 9x19mm R-17",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "63076701a987397c0816d21b",
+            "name": "G19X 9x19mm R-19",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5a718da68dc32e000d46d264",
+            "name": "GL9 9x19mm R-21",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5a718f958dc32e00094b97e7",
+            "name": "G SGMT 9x19mm R-60",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "630769c4962d0247b029dc60",
+            "name": "BIG STICK 9x19mm R-24",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "630767c37d50ff5e8a1ea71a",
+            "name": "BIG STICK 9x19mm R-31",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5a7ad2e851dfba0016153692",
+            "name": "BIG STICK 9x19mm R-33",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+
+
+
+        {
+            "id": "59f99a7d86f7745b134aa97b",
+            "name": "SR-1MP 9x21mm R-18",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "633a98eab8b0506e48497c1a",
+            "name": "SR-2M 9x21mm R-20",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "62e153bcdb1a5c41971c1b5b",
+            "name": "SR-2M 9x21mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+
+
+
+        {
+            "id": "57838f0b2459774a256959b2",
+            "name": "6L24 9x39mm R-10",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "57838f9f2459774a150289a0",
+            "name": "6L25 9x39mm R-20",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+
+
+
+        {
+            "id": "5ba264f6d4351e0034777d52",
+            "name": "MP7 HK 4.6x30mm R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5ba2657ed4351e0035628ff2",
+            "name": "MP7 HK 4.6x30mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "5ba26586d4351e44f824b340",
+            "name": "MP7 HK 4.6x30mm R-40",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        
+
+
+        {
+            "id": "56deee15d2720bee328b4567",
+            "name": "MP-153x4 12ga R-4",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "56deee15d2720bee328b4567",
+            "name": "MP-153x5 12ga R-5",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5882163824597757561aa922",
+            "name": "MP-153x6 12ga R-6",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5882163224597757561aa920",
+            "name": "MP-153x7 12ga R-7",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "56deeefcd2720bc8328b4568",
+            "name": "MP-153x8 12ga R-8",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "6076c87f232e5a31c233d50e",
+            "name": "MP-155x6 12ga R-6",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "55d484b44bdc2d1d4e8b456d",
+            "name": "MP-133x6 12ga R-6",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "55d485804bdc2d8c2f8b456b",
+            "name": "MP-133x8 12ga R-8",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "625ff2ccb8c587128c1a01dd",
+            "name": "M3x5 12ga R-5",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "6259bdcabd28e4721447a2aa",
+            "name": "M3x7 12ga R-7",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "625ff3046d721f05d93bf2ee",
+            "name": "M3x11 12ga R-11",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "625ff2eb9f5537057932257d",
+            "name": "M3x9 12ga R-9",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "625ff31daaaa8c1130599f64",
+            "name": "M3x13 12ga R-13",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "5a7882dcc5856700177af662",
+            "name": "M870x4 12ga R-4",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5a78830bc5856700137e4c90",
+            "name": "M870x7 12ga R-7",
+            "rarity": "3",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5a78832ec5856700155a6ca3",
+            "name": "M870x10 12ga R-10",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "60dc519adf4c47305f6d410d",
+            "name": "MTS-255 12ga R-5",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5e87080c81c4ed43e83cefda",
+            "name": "590A1-8 12ga R-8",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "57616a9e2459773c7a400234",
+            "name": "SB.5 12ga R-5",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5a966f51a2750c00156aacf6",
+            "name": "SAI-02 12ga R-10",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "5cf8f3b0d7f00c00217872ef",
+            "name": "POWERMAG 12ga R-20",
+            "rarity": "5",
+            "magLoadPercent": -80
+        },
+
+
+
+        {
+            "id": "5a38ee51c4a282000c5a955c",
+            "name": "SB.3x2 20ga R-2",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5a38ed75c4a28232996e40c6",
+            "name": "SB.3x4 20ga R-4",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "5c6161fb2e221600113fbde5",
+            "name": "SB.3x5 20ga R-5",
+            "rarity": "2",
+            "magLoadPercent": -40
+        },
+
+
+
+        {
+            "id": "627bce33f21bc425b06ab967",
+            "name": "MSGL 40mm R-6",
+            "rarity": "1",
+            "magLoadPercent": -80
+        },
+        {
+            "id": "619f54a1d25cbd424731fb99",
+            "name": "CR CYL 9x33 R-6",
+            "rarity": "1",
+            "magLoadPercent": -80
+        },
+        {
+            "id": "624c3074dbbd335e8e6becf3",
+            "name": "CR CYL 9x19 R-6",
+            "rarity": "1",
+            "magLoadPercent": -80
+        },
+        {
+            "id": "633ec6ee025b096d320a3b15",
+            "name": "RSH12 CYL 12.7x55mm R-5",
+            "rarity": "1",
+            "magLoadPercent": -80
+        },
+        {
+            "id": "60dc519adf4c47305f6d410d",
+            "name": "255 CYL 12GA R-5",
+            "rarity": "1",
+            "magLoadPercent": -80
+        }
+    ]
+}

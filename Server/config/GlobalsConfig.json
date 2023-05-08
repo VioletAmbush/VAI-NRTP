@@ -1,0 +1,14 @@
+{
+    "enabled": true,
+
+    "removeConstructionTime": true,
+    "removeSkillFatigue": true,
+    "removeInRaidItemRestrictions": true,
+    "allExitsAvailable": true,
+    "exitsAlwaysAvailable": true,
+    "removeRunThroughs": true,
+
+    "staticLootMultiplier": 2,
+    "looseLootMultiplier": 2,
+    "raidTimeMultiplier": 20
+}

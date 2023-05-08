@@ -1,0 +1,122 @@
+{
+    "enabled": true,
+
+    "player": {
+        "head": 350,
+        "chest": 850,
+        "stomach": 700,
+        "arm": 600,
+        "leg": 650
+    },
+
+    "bossMultiplier": 8,
+    "followerMultiplier": 6,
+    
+    "bots": {
+        "assault": {
+            "head": 240,
+            "chest": 595,
+            "stomach": 490,
+            "arm": 420,
+            "leg": 455
+        },
+        "cursedassault": {
+            "head": 240,
+            "chest": 595,
+            "stomach": 490,
+            "arm": 420,
+            "leg": 455
+        },
+        "arenafighterevent": {
+            "head": 360,
+            "chest": 900,
+            "stomach": 640,
+            "arm": 630,
+            "leg": 680
+        },
+        "marksman": {
+            "head": 35,
+            "chest": 240,
+            "stomach": 200,
+            "arm": 150,
+            "leg": 100
+        },
+        "pmcbot": {
+            "head": 280,
+            "chest": 800,
+            "stomach": 650,
+            "arm": 480,
+            "leg": 420
+        },
+        "usec": {
+            "head": 280,
+            "chest": 800,
+            "stomach": 650,
+            "arm": 480,
+            "leg": 420
+        },
+        "bear": {
+            "head": 280,
+            "chest": 800,
+            "stomach": 650,
+            "arm": 480,
+            "leg": 420
+        },
+        "sectantpriest": {
+            "head": 500,
+            "chest": 2000,
+            "stomach": 2000,
+            "arm": 1000,
+            "leg": 1000
+        },
+        "sectantwarrior": {
+            "head": 500,
+            "chest": 2400,
+            "stomach": 1600,
+            "arm": 1000,
+            "leg": 1000
+        },
+        "exusec": {
+            "head": 300,
+            "chest": 1150,
+            "stomach": 1000,
+            "arm": 480,
+            "leg": 420
+        },
+        "bosszryachiy": {
+            "head": 160,
+            "chest": 4320,
+            "stomach": 2640,
+            "arm": 1800,
+            "leg": 1800
+        },
+        "followerzryachiy": {
+            "head": 200,
+            "chest": 3340,
+            "stomach": 1820,
+            "arm": 1200,
+            "leg": 1200
+        },
+        "followerbirdeye": {
+            "head": 160,
+            "chest": 2160,
+            "stomach": 1200,
+            "arm": 800,
+            "leg": 800
+        },
+        "bosskojaniy": {
+            "head": 160,
+            "chest": 2160,
+            "stomach": 1600,
+            "arm": 800,
+            "leg": 1200
+        },
+        "followerkojaniy": {
+            "head": 120,
+            "chest": 1800,
+            "stomach": 1200,
+            "arm": 800,
+            "leg": 1000
+        }
+    }
+}

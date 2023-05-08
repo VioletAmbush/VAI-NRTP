@@ -1,0 +1,132 @@
+{
+    "enabled": true,
+
+    "items": [
+        {
+            "id": "54491bb74bdc2d09088b4567",
+            "name": "ER FULCRUM BAYONET",
+            "rarity": "1",
+            "slashDamage": 34,
+            "stabDamage": 45
+        },
+        {
+            "id": "57e26fc7245977162a14b800",
+            "name": "Bars A-2607 (Brown)",
+            "rarity": "1",
+            "slashDamage": 38,
+            "stabDamage": 48
+        },
+        {
+            "id": "57e26ea924597715ca604a09",
+            "name": "Bars A-2607 (Black)",
+            "rarity": "1",
+            "slashDamage": 41,
+            "stabDamage": 50
+        },
+        {
+            "id": "5c07df7f0db834001b73588a",
+            "name": "Freeman crowbar",
+            "rarity": "2",
+            "slashDamage": 38,
+            "stabDamage": 60
+        },
+        {
+            "id": "5bffdc370db834001d23eca8",
+            "name": "6Kh5 Bayonet",
+            "rarity": "2",
+            "slashDamage": 52,
+            "stabDamage": 62
+        },
+        {
+            "id": "5bc9c1e2d4351e00367fbcf0",
+            "name": "Antique axe",
+            "rarity": "3",
+            "slashDamage": 48,
+            "stabDamage": 82
+        },
+        {
+            "id": "5bead2e00db834001c062938",
+            "name": "MPL-50 Spade",
+            "rarity": "3",
+            "slashDamage": 72,
+            "stabDamage": 84
+        },
+        {
+            "id": "5c010e350db83400232feec7",
+            "name": "SP-8 Survival Machete",
+            "rarity": "3",
+            "slashDamage": 88,
+            "stabDamage": 80
+        },
+        {
+            "id": "5c012ffc0db834001d23f03f",
+            "name": "Camper axe",
+            "rarity": "4",
+            "slashDamage": 90,
+            "stabDamage": 128
+        },
+        {
+            "id": "57cd379a24597778e7682ecf",
+            "name": "Kiba Arms Tactical Tomahawk",
+            "rarity": "4",
+            "slashDamage": 105,
+            "stabDamage": 135
+        },
+        {
+            "id": "5fc64ea372b0dd78d51159dc",
+            "name": "Cultist knife",
+            "rarity": "6",
+            "slashDamage": 110,
+            "stabDamage": 135
+        },
+        {
+            "id": "5bffe7930db834001b734a39",
+            "name": "Crash Axe",
+            "rarity": "4",
+            "slashDamage": 150,
+            "stabDamage": 220
+        },
+        {
+            "id": "63920105a83e15700a00f168",
+            "name": "SOG Voodoo Hawk tactical tomahawk",
+            "rarity": "5",
+            "slashDamage": 180,
+            "stabDamage": 260
+        },
+        {
+            "id": "5bffdd7e0db834001b734a1a",
+            "name": "Miller Bros. Blades M-2 Tactical Sword",
+            "rarity": "5",
+            "slashDamage": 245,
+            "stabDamage": 200
+        },
+        {
+            "id": "601948682627df266209af05",
+            "name": "UVSR Taiga-1 survival machete",
+            "rarity": "6",
+            "slashDamage": 285,
+            "stabDamage": 340
+        },
+        {
+            "id": "6087e570b998180e9f76dc24",
+            "name": "Superfors DB 2020 Dead Blow Hammer",
+            "rarity": "6",
+            "slashDamage": 172,
+            "stabDamage": 240
+        },
+        {
+            "id": "63495c500c297e20065a08b1",
+            "name": "Old hand scythe",
+            "rarity": "6",
+            "slashDamage": 340,
+            "stabDamage": 340
+        },
+        {
+            "id": "5c0126f40db834002a125382",
+            "name": "Red Rebel ice pick",
+            "rarity": "6",
+            "slashDamage": 30,
+            "stabDamage": 38
+        }
+    ]
+}

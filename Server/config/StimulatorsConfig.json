@@ -1,0 +1,624 @@
+{
+    "enabled": true,
+
+    "items": [
+        {
+            "id": "544fb3f34bdc2d03748b456a",
+            "name": "Morphine",
+            "rarity": "1"
+        },
+        {
+            "id": "544fb25a4bdc2dfb738b4567",
+            "name": "Aseptic bandage",
+            "rarity": "1"
+        },
+        {
+            "id": "5751a25924597722c463c472",
+            "name": "Army bandage",
+            "rarity": "2"
+        },
+        {
+            "id": "5e831507ea0a7c419c2f9bd9",
+            "name": "Esmarch tourniquet",
+            "rarity": "1"
+        },
+        {
+            "id": "60098af40accd37ef2175f27",
+            "name": "CAT hemostatic tourniquet",
+            "rarity": "2"
+        },
+        {
+            "id": "5e8488fa988a8701445df1e4",
+            "name": "CALOK-B hemostatic applicator",
+            "rarity": "3"
+        },
+        {
+            "id": "544fb37f4bdc2dee738b4567",
+            "name": "Analgin painkillers",
+            "rarity": "1"
+        },
+        {
+            "id": "5af0548586f7743a532b7e99",
+            "name": "Ibuprofen painkillers",
+            "rarity": "3"
+        },
+        {
+            "id": "544fb3364bdc2d34748b456a",
+            "name": "Immobilizing splint",
+            "rarity": "1"
+        },
+        {
+            "id": "5af0454c86f7746bf20992e8",
+            "name": "Aluminum splint",
+            "rarity": "3"
+        },
+        {
+            "id": "5d02778e86f774203e7dedbe",
+            "name": "CMS surgical kit",
+            "rarity": "2"
+        },
+        {
+            "id": "5d02797c86f774203f38e30a",
+            "name": "Surv12 field surgical kit",
+            "rarity": "3"
+        },
+        {
+            "id": "5c10c8fd86f7743d7d706df3",
+            "name": "Adrenaline",
+            "rarity": "2",
+            "buffs": [
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 15,
+                    "skillName": "Endurance"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 15,
+                    "skillName": "Strength"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 15,
+                    "skillName": "RecoilControl"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": -15,
+                    "skillName": "StressResistance"
+                },
+                {
+                    "buffType": "HealthRate",
+                    "duration": 15,
+                    "value": 60
+                },
+                {
+                    "buffType": "EnergyRate",
+                    "duration": 1200,
+                    "value": -0.05
+                },
+                {
+                    "buffType": "HydrationRate",
+                    "duration": 1200,
+                    "value": -0.05
+                }
+            ]
+        },
+        {
+            "id": "5c0e530286f7747fa1419862",
+            "name": "Propital",
+            "rarity": "3",
+            "painkillerDuration": 300,
+            "contusionDuration": 300,
+            "buffs": [
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Metabolism"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Health"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Vitality"
+                },
+                {
+                    "buffType": "HealthRate",
+                    "duration": 120,
+                    "value": 20
+                },
+                {
+                    "buffType": "HandsTremor",
+                    "duration": 30,
+                    "delay": 90
+                },
+                {
+                    "buffType": "QuantumTunnelling",
+                    "duration": 30,
+                    "delay": 90
+                }
+            ]
+        },
+        {
+            "id": "5c0e534186f7747fa1419867",
+            "name": "eTG-change",
+            "rarity": "4",
+            "contusionDuration": 300,
+            "buffs": [
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Metabolism"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Immunity"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": -10,
+                    "skillName": "Health"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": -10,
+                    "skillName": "Endurance"
+                },
+                {
+                    "buffType": "HealthRate",
+                    "duration": 30,
+                    "value": 160
+                },
+                {
+                    "buffType": "EnergyRate",
+                    "duration": 60,
+                    "value": -1
+                }
+            ]
+        },
+        {
+            "id": "637b6251104668754b72f8f9",
+            "name": "Perfotoran (Blue Blood)",
+            "rarity": "4",
+            "intoxicationDuration": 300,
+            "radExposureDuration": 300,
+            "buffs": [
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 15,
+                    "skillName": "Metabolism"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": -25,
+                    "skillName": "Health"
+                },
+                {
+                    "buffType": "HealthRate",
+                    "duration": 120,
+                    "value": 30
+                },
+                {
+                    "buffType": "Antidote",
+                    "duration": 300
+                },
+                {
+                    "buffType": "RemoveAllBloodLosses",
+                    "duration": 300
+                },
+                {
+                    "buffType": "EnergyRate",
+                    "delay": 240,
+                    "duration": 60,
+                    "value": -1.1
+                }
+            ]
+        },
+        {
+            "id": "637b6179104668754b72f8f5",
+            "name": "PNB (Product 16)",
+            "rarity": "5",
+            "contusionDuration": 300,
+            "buffs": [
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 40,
+                    "skillName": "Strength"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1800,
+                    "value": -20,
+                    "skillName": "Health"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1800,
+                    "value": -20,
+                    "skillName": "Vitality"
+                },
+                {
+                    "buffType": "HealthRate",
+                    "duration": 60,
+                    "value": 80
+                },
+                {
+                    "buffType": "HandsTremor",
+                    "duration": 1800
+                },
+                {
+                    "buffType": "DamageModifier",
+                    "duration": 1200,
+                    "value": -0.3
+                }
+            ]
+        },
+        {
+            "id": "5c0e531286f7747fa54205c2",
+            "name": "SJ1",
+            "rarity": "2",
+            "buffs": [
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Strength"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Endurance"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "StressResistance"
+                },
+                {
+                    "buffType": "EnergyRate",
+                    "duration": 200,
+                    "value": -0.5
+                },
+                {
+                    "buffType": "HydrationRate",
+                    "duration": 200,
+                    "value": -0.6
+                }
+            ]
+        },
+        {
+            "id": "5c0e531d86f7747fa23f4d42",
+            "name": "SJ6",
+            "rarity": "3",
+            "buffs": [
+                {
+                    "buffType": "StaminaRate",
+                    "duration": 1200,
+                    "value": 2
+                },
+                {
+                    "buffType": "QuantumTunnelling",
+                    "delay": 1000,
+                    "duration": 200
+                },
+                {
+                    "buffType": "HandsTremor",
+                    "delay": 1000,
+                    "duration": 200
+                }
+            ]
+        },
+        {
+            "id": "637b620db7afa97bfc3d7009",
+            "name": "Trimadol",
+            "rarity": "4",
+            "contusionDuration": 300,
+            "painkillerDuration": 300,
+            "buffs": [
+                {
+                    "buffType": "StaminaRate",
+                    "duration": 1200,
+                    "value": 3
+                },
+                {
+                    "buffType": "EnergyRate",
+                    "duration": 1200,
+                    "value": -0.05
+                },
+                {
+                    "buffType": "HydrationRate",
+                    "duration": 1200,
+                    "value": -0.05
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Strength"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Endurance"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Attention"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "StressResistance"
+                }
+            ]
+        },
+        {
+            "id": "5ed515ece452db0eb56fc028",
+            "name": "P22 (Product 22)",
+            "rarity": "4",
+            "buffs": [
+                {
+                    "buffType": "StaminaRate",
+                    "delay": 1000,
+                    "duration": 200,
+                    "value": -1.2
+                },
+                {
+                    "buffType": "DamageModifier",
+                    "duration": 1200,
+                    "value": -0.2
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 30,
+                    "skillName": "StressResistance"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 30,
+                    "skillName": "Health"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 30,
+                    "skillName": "Vitality"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "delay": 1080,
+                    "duration": 120,
+                    "value": -25,
+                    "skillName": "Endurance"
+                }
+            ]
+        },
+        {
+            "id": "5ed515e03a40a50460332579",
+            "name": "L1 (Norepinephrine)",
+            "rarity": "2",
+            "painkillerDuration": 300,
+            "buffs": [
+                {
+                    "buffType": "HydrationRate",
+                    "duration": 60,
+                    "value": -0.5
+                },
+                {
+                    "buffType": "EnergyRate",
+                    "duration": 60,
+                    "value": -0.5
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 10,
+                    "skillName": "Endurance"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Strength"
+                }
+            ]
+        },
+        {
+            "id": "5ed5160a87bb8443d10680b5",
+            "name": "Meldonin",
+            "rarity": "4",
+            "painkillerDuration": 300,
+            "buffs": [
+                {
+                    "buffType": "DamageModifier",
+                    "duration": 1200,
+                    "value": -0.25
+                },
+                {
+                    "buffType": "EnergyRate",
+                    "duration": 1200,
+                    "value": -0.1
+                },
+                {
+                    "buffType": "HydrationRate",
+                    "duration": 1200,
+                    "value": -0.1
+                },
+                {
+                    "buffType": "StaminaRate",
+                    "duration": 1200,
+                    "value": 0.5
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 10,
+                    "skillName": "Strength"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Endurance"
+                }
+            ]
+        },
+        {
+            "id": "5ed515c8d380ab312177c0fa",
+            "name": "3-(b-TG)",
+            "rarity": "3",
+            "painkillerDuration": 300,
+            "buffs": [
+                {
+                    "buffType": "HandsTremor",
+                    "delay": 900,
+                    "duration": 300
+                },
+                {
+                    "buffType": "EnergyRate",
+                    "duration": 600,
+                    "value": -0.1
+                },
+                {
+                    "buffType": "StaminaRate",
+                    "duration": 1200,
+                    "value": 1
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 30,
+                    "skillName": "Attention"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 30,
+                    "skillName": "Perception"
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 10,
+                    "skillName": "Strength"
+                }
+            ]
+        },
+        {
+            "id": "5ed515f6915ec335206e4152",
+            "name": "AHF1-M",
+            "rarity": "3",
+            "buffs": [
+                {
+                    "buffType": "HydrationRate",
+                    "delay": 120,
+                    "duration": -0.3
+                },
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 40,
+                    "skillName": "Health"
+                }
+            ]
+        },
+        {
+            "id": "5ed5166ad380ab312177c100",
+            "name": "Obdolbos",
+            "rarity": "4"
+        },
+        {
+            "id": "637b60c3b7afa97bfc3d7001",
+            "name": "Obdolbos 2",
+            "rarity": "5"
+        },
+        {
+            "id": "590c695186f7741e566b64a2",
+            "name": "Augmentin antibiotic pills",
+            "rarity": "2",
+            "buffs": [
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 50,
+                    "skillName": "Immunity"
+                }
+            ]
+        },
+        {
+            "id": "5755383e24597772cb798966",
+            "name": "Vaseline balm",
+            "rarity": "3"
+        },
+        {
+            "id": "5751a89d24597722aa0e8db0",
+            "name": "Golden Star balm",
+            "rarity": "4",
+            "removeGoldenStarContusion": true,
+            "buffs": [
+                {
+                    "buffType": "HydrationRate",
+                    "duration": 1200,
+                    "value": 0.5
+                },
+                {
+                    "buffType": "EnergyRate",
+                    "duration": 1200,
+                    "value": 0.5
+                }
+            ]
+        },
+        {
+            "id": "5ed51652f6c34d2cc26336a1",
+            "name": "MULE",
+            "rarity": "4",
+            "removeGoldenStarContusion": true,
+            "buffs": [
+                {
+                    "buffType": "HealthRate",
+                    "duration": 1200,
+                    "value": -30
+                },
+                {
+                    "buffType": "WeightLimit",
+                    "duration": 1200,
+                    "absoluteValue": false,
+                    "value": 1
+                },
+                {
+                    "buffType": "DamageModifier",
+                    "duration": 1200,
+                    "absoluteValue": false,
+                    "value": 0.1
+                }
+            ]
+        }
+    ]
+}
