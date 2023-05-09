@@ -37,12 +37,16 @@ export class GlobalsManager extends AbstractModManager
             this.databaseTables.globals.config.RestrictionsInRaid = []
         }
 
-        this.setLootMultipliers()
         this.setEscapeTimeLimits()
         this.trySetConstructionTime()
         this.trySetExitsAlwaysAvailable()
         this.trySetAllExitsAvailable()
         this.tryRemoveRunThroughs()
+    }
+
+    protected afterPostAki(): void
+    {
+        this.setLootMultipliers()
 
         console.log(`${Constants.ModTitle}: Globals config changes applied!`)
     }

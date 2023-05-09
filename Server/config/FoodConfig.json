@@ -422,7 +422,7 @@
             "name": "Can of herring",
             "rarity": "1",
             "energyCost": 30,
-            "hydrationCost": -70,
+            "hydrationCost": -50,
             "buffs": [
                 {
                     "buffType": "HealthRate",
@@ -436,7 +436,7 @@
             "name": "Can of pacific saury",
             "rarity": "1",
             "energyCost": 50,
-            "hydrationCost": -80,
+            "hydrationCost": -60,
             "buffs": [
                 {
                     "buffType": "HealthRate",
@@ -521,7 +521,7 @@
             "name": "Slickers chocolate bar",
             "rarity": "2",
             "energyCost": 30,
-            "hydrationCost": -65,
+            "hydrationCost": -45,
             "buffs": [
                 {
                     "buffType": "MaxStamina",
@@ -554,7 +554,7 @@
             "name": "Alyonka chocolate bar",
             "rarity": "4",
             "energyCost": 25,
-            "hydrationCost": -50,
+            "hydrationCost": -40,
             "buffs": [
                 {
                     "buffType": "MaxStamina",
