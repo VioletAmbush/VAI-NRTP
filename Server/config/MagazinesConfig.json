@@ -155,8 +155,8 @@
         {
             "id": "544a37c44bdc2d25388b4567",
             "name": "MAG5-60 STANAG 5.56x45mm R-60",
-            "rarity": "5",
-            "magLoadPercent": -80
+            "rarity": "4",
+            "magLoadPercent": -60
         },
 
 

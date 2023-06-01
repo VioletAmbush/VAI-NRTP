@@ -11,6 +11,7 @@
 
     "bossMultiplier": 8,
     "followerMultiplier": 6,
+    "commonMultiplier": 6,
     
     "bots": {
         "assault": {

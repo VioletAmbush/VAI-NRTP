@@ -35,7 +35,12 @@ export class HealthManager extends AbstractModManager
     {
         for (let botEntry in this.config.bots)
         {
-            this.setTypeHealthConfig(this.databaseTables.bots.types[botEntry].health, this.config.bots[botEntry])
+            const bot = this.databaseTables.bots.types[botEntry]
+
+            if (bot)
+            {
+                this.setTypeHealthConfig(bot.health, this.config.bots[botEntry])
+            }
         }
 
         for (let bot in this.databaseTables.bots.types)
@@ -49,6 +54,10 @@ export class HealthManager extends AbstractModManager
                 else if (bot.includes("follower"))
                 {
                     this.setTypeHealthMult(this.databaseTables.bots.types[bot].health, this.config.followerMultiplier)
+                }
+                else
+                {
+                    this.setTypeHealthMult(this.databaseTables.bots.types[bot].health, this.config.commonMultiplier)
                 }
             }
         }

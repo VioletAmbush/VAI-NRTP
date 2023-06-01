@@ -619,8 +619,8 @@
             "id": "57347d8724597744596b4e76",
             "name": "Can of squash spread",
             "rarity": "3",
-            "energyCost": 40,
-            "hydrationCost": 20,
+            "energyCost": 50,
+            "hydrationCost": 30,
             "buffs": [
                 {
                     "buffType": "SkillRate",
