@@ -23,12 +23,12 @@ namespace TarkovRPG
         [HarmonyPrefix]
         private static bool CreateShot(
             BallisticsCalculator __instance,
-            ref GClass2624? __result,
+            ref GClass2870? __result,
             BulletClass __0,
             UnityEngine.Vector3 __1,
             UnityEngine.Vector3 __2,
             int __3,
-            Player __4,
+            string __4,
             Item __5,
             float __6 = 1f,
             int __7 = 0)
@@ -95,7 +95,7 @@ namespace TarkovRPG
 
             damage *= damageMult;
 
-            __result = GClass2624.Create(
+            __result = GClass2870.Create(
                 __0,
                 __7,
                 num1,
@@ -153,7 +153,7 @@ namespace TarkovRPG
             List<ArmorComponent> armorComponentList = new List<ArmorComponent>();
 
             var armorClass = 0;
-            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass2412.InvincibleBalaclava);
+            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass2655.InvincibleBalaclava);
 
             foreach (ArmorComponent allocatedArmorComponent in _preAllocArmorComps)
             {
@@ -239,7 +239,7 @@ namespace TarkovRPG
         [HarmonyPostfix]
         private static void ApplyShot(
             Player __instance,
-            GClass1597? __result,
+            GClass1661? __result,
             DamageInfo __0,
             EBodyPart __1,
             GStruct304 __2)
@@ -284,7 +284,7 @@ namespace TarkovRPG
 #endif
         }
 
-        [HarmonyPatch(typeof(GClass1181), "ToColor")]
+        [HarmonyPatch(typeof(GClass1219), "ToColor")]
         [HarmonyPostfix]
         private static void ToColor(
             ref UnityEngine.Color __result,
@@ -313,12 +313,5 @@ namespace TarkovRPG
         {
             return new Color32(r, g, b, a);
         }
-
-        //[HarmonyPatch(typeof(GClass2106), "ApplyItem")]
-        //[HarmonyPostfix]
-        //private static void ApplyItem()
-        //{
-        //    Logger.LogMessage("Item applied!");
-        //}
     }
 }
