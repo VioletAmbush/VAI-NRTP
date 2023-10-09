@@ -10,6 +10,7 @@ using BepInEx.Logging;
 using System.Text;
 using JsonType;
 using UnityEngine;
+using EFT.HealthSystem;
 
 namespace TarkovRPG
 {
@@ -23,7 +24,7 @@ namespace TarkovRPG
         [HarmonyPrefix]
         private static bool CreateShot(
             BallisticsCalculator __instance,
-            ref GClass2870? __result,
+            ref GClass2783? __result,
             BulletClass __0,
             UnityEngine.Vector3 __1,
             UnityEngine.Vector3 __2,
@@ -46,6 +47,12 @@ namespace TarkovRPG
                 weapon.WeapClass.Equals("sniperRifle"))
             {
                 damageMult = ConfigRepository[DamageStatKey.BoltAction];
+            }
+            else if (
+                weapon.Template._id == "59f9cabd86f7743a10721f46" ||
+                weapon.Template._id == "60339954d62c9b14ed777c06")
+            {
+                damageMult = ConfigRepository[DamageStatKey.SingleSMGs];
             }
             else if (weapon.Template._id == "61f7c9e189e6fb1a5e3ea78d") // Break-action single-fire rifle
             {
@@ -95,7 +102,7 @@ namespace TarkovRPG
 
             damage *= damageMult;
 
-            __result = GClass2870.Create(
+            __result = GClass2783.Create(
                 __0,
                 __7,
                 num1,
@@ -148,12 +155,12 @@ namespace TarkovRPG
 
             var _preAllocArmorComps = __instance.GetPrivateFieldValue<List<ArmorComponent>>("_preAllocatedArmorComponents");
             _preAllocArmorComps.Clear();
-            __instance.GetPrivatePropertyValue<InventoryClass>("Inventory").GetPutOnArmorsNonAlloc(_preAllocArmorComps);
+            __instance.GetPrivatePropertyValue<Inventory>("Inventory").GetPutOnArmorsNonAlloc(_preAllocArmorComps);
 
             List<ArmorComponent> armorComponentList = new List<ArmorComponent>();
 
             var armorClass = 0;
-            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass2655.InvincibleBalaclava);
+            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass2567.InvincibleBalaclava);
 
             foreach (ArmorComponent allocatedArmorComponent in _preAllocArmorComps)
             {
@@ -239,7 +246,7 @@ namespace TarkovRPG
         [HarmonyPostfix]
         private static void ApplyShot(
             Player __instance,
-            GClass1661? __result,
+            GClass1560? __result,
             DamageInfo __0,
             EBodyPart __1,
             GStruct304 __2)
@@ -284,7 +291,7 @@ namespace TarkovRPG
 #endif
         }
 
-        [HarmonyPatch(typeof(GClass1219), "ToColor")]
+        [HarmonyPatch(typeof(GClass1119), "ToColor")]
         [HarmonyPostfix]
         private static void ToColor(
             ref UnityEngine.Color __result,

@@ -18,6 +18,7 @@ namespace TarkovRPG
             Default,
             BoltAction,
             Marksman,
+            SingleSMGs,
             Pistol,
             Revolver,
             Shotgun,
@@ -67,6 +68,7 @@ namespace TarkovRPG
             BindConfig(Section.DamageSettings, DamageStatKey.Default, 1f, "Default shot damage multiplier");
             BindConfig(Section.DamageSettings, DamageStatKey.BoltAction, 4f, "Bolt-action sniper rifle damage multiplier");
             BindConfig(Section.DamageSettings, DamageStatKey.Marksman, 2f, "Marksman rifle damage multiplier");
+            BindConfig(Section.DamageSettings, DamageStatKey.SingleSMGs, 1.8f, "Single-fire SMGs damage multiplier)");
             BindConfig(Section.DamageSettings, DamageStatKey.Pistol, 1.8f, "Pistol damage multiplier");
             BindConfig(Section.DamageSettings, DamageStatKey.Revolver, 3f, "Revolver damage multiplier");
             BindConfig(Section.DamageSettings, DamageStatKey.Shotgun, 1f, "Shotgun damage multiplier");
