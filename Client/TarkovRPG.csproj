@@ -4,7 +4,7 @@
     <TargetFramework>net46</TargetFramework>
     <AssemblyName>VAI-NRTP</AssemblyName>
     <Description>VAI-NRTP</Description>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>

@@ -1,6 +1,6 @@
 {
     "name": "NRTP",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "src/ModManager.js",
     "license": "CC BY-NC-SA 3.0",
     "author": "VioletAmbush, Incurso",

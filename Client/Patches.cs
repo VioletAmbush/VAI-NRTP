@@ -24,7 +24,7 @@ namespace TarkovRPG
         [HarmonyPrefix]
         private static bool CreateShot(
             BallisticsCalculator __instance,
-            ref GClass2783? __result,
+            ref GClass2784? __result,
             BulletClass __0,
             UnityEngine.Vector3 __1,
             UnityEngine.Vector3 __2,
@@ -102,7 +102,7 @@ namespace TarkovRPG
 
             damage *= damageMult;
 
-            __result = GClass2783.Create(
+            __result = GClass2784.Create(
                 __0,
                 __7,
                 num1,
@@ -160,7 +160,7 @@ namespace TarkovRPG
             List<ArmorComponent> armorComponentList = new List<ArmorComponent>();
 
             var armorClass = 0;
-            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass2567.InvincibleBalaclava);
+            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass2568.InvincibleBalaclava);
 
             foreach (ArmorComponent allocatedArmorComponent in _preAllocArmorComps)
             {
