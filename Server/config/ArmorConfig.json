@@ -909,7 +909,81 @@
             "rarity": "5"
         },
 
-
+        {
+            "id": "5b432be65acfc433000ed01f",
+            "name": "6B34",
+            "rarity": "1"
+        },
+        {
+            "id": "59e770b986f7742cbd762754",
+            "name": "AFGlass",
+            "rarity": "1"
+        },
+        {
+            "id": "59e770b986f7742cbd762754",
+            "name": "AFGlass",
+            "rarity": "1"
+        },
+        {
+            "id": "5aa2b986e5b5b00014028f4c",
+            "name": "Dundukk",
+            "rarity": "1"
+        },
+        {
+            "id": "5d6d2e22a4b9361bd5780d05",
+            "name": "Gascan",
+            "rarity": "1"
+        },
+        {
+            "id": "5c1a1cc52e221602b3136e3d",
+            "name": "M Frame",
+            "rarity": "1"
+        },
+        {
+            "id": "5c0d32fcd174af02a1659c75",
+            "name": "Proximity",
+            "rarity": "1"
+        },
+        {
+            "id": "557ff21e4bdc2d89578b4586",
+            "name": "TGlasses",
+            "rarity": "1"
+        },
+        {
+            "id": "5aa2b923e5b5b000137b7589",
+            "name": "RGlasses",
+            "rarity": "2"
+        },
+        {
+            "id": "5aa2b9aee5b5b00015693121",
+            "name": "RayBench",
+            "rarity": "3"
+        },
+        {
+            "id": "5d6d2ef3a4b93618084f58bd",
+            "name": "Aviator",
+            "rarity": "3"
+        },
+        {
+            "id": "62a09e410b9d3c46de5b6e78",
+            "name": "JohnB",
+            "rarity": "3"
+        },
+        {
+            "id": "5d5fca1ea4b93635fd598c07",
+            "name": "Crossbow",
+            "rarity": "4"
+        },
+        {
+            "id": "5e71f70186f77429ee09f183",
+            "name": "Rivals",
+            "rarity": "4"
+        },
+        {
+            "id": "61c18d83b00456371a66814b",
+            "name": "Gaswelder",
+            "rarity": "5"
+        },
 
         {
             "id": "636270263f2495c26f00b007",

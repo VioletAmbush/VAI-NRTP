@@ -208,6 +208,16 @@
             "name": "Mosin 7.62x54R (Infantry)",
             "rarity": "2"
         },
+        {
+            "id": "643ea5b23db6f9f57107d9fd",
+            "name": "SVT-40 7.62x54R",
+            "rarity": "2"
+        },
+        {
+            "id": "6410733d5dd49d77bd07847e",
+            "name": "AVT-40 7.62x54R",
+            "rarity": "3"
+        },
         
         {
             "id": "5f36a0e5fbf956000b716b65",
@@ -352,6 +362,11 @@
         {
             "id": "5ac66d9b5acfc4001633997a",
             "name": "Kalashnikov AK-105 5.45x39",
+            "rarity": "3"
+        },
+        {
+            "id": "6499849fc93611967b034949",
+            "name": "Kalashnikov AK-12 5.45x39",
             "rarity": "3"
         },
         {
@@ -595,6 +610,11 @@
         {
             "id": "620109578d82e67e7911abf2",
             "name": "ZiD SP-81 26x75",
+            "rarity": "6"
+        },
+        {
+            "id": "64748d02d1c009260702b526",
+            "name": "MP-43 sawed-off 12ga",
             "rarity": "6"
         },
 

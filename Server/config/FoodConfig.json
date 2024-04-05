@@ -408,7 +408,7 @@
             "name": "Can of humpback salmon",
             "rarity": "1",
             "energyCost": 40,
-            "hydrationCost": -50,
+            "hydrationCost": -30,
             "buffs": [
                 {
                     "buffType": "HealthRate",
@@ -422,7 +422,7 @@
             "name": "Can of herring",
             "rarity": "1",
             "energyCost": 30,
-            "hydrationCost": -50,
+            "hydrationCost": -20,
             "buffs": [
                 {
                     "buffType": "HealthRate",
@@ -436,7 +436,7 @@
             "name": "Can of pacific saury",
             "rarity": "1",
             "energyCost": 50,
-            "hydrationCost": -60,
+            "hydrationCost": -40,
             "buffs": [
                 {
                     "buffType": "HealthRate",
@@ -464,7 +464,7 @@
             "name": "Can of beef stew (Small)",
             "rarity": "2",
             "energyCost": 30,
-            "hydrationCost": -25,
+            "hydrationCost": -20,
             "buffs": [
                 {
                     "buffType": "HealthRate",
@@ -479,7 +479,7 @@
             "name": "Army crackers",
             "rarity": "1",
             "energyCost": 15,
-            "hydrationCost": -30,
+            "hydrationCost": -15,
             "buffs": [
                 {
                     "buffType": "MaxStamina",
@@ -493,7 +493,7 @@
             "name": "Rye croutons",
             "rarity": "1",
             "energyCost": 15,
-            "hydrationCost": -30,
+            "hydrationCost": -15,
             "buffs": [
                 {
                     "buffType": "MaxStamina",
@@ -521,7 +521,7 @@
             "name": "Slickers chocolate bar",
             "rarity": "2",
             "energyCost": 30,
-            "hydrationCost": -45,
+            "hydrationCost": -20,
             "buffs": [
                 {
                     "buffType": "MaxStamina",
@@ -535,7 +535,7 @@
             "name": "Emelya rye croutons",
             "rarity": "3",
             "energyCost": 15,
-            "hydrationCost": -30,
+            "hydrationCost": -15,
             "buffs": [
                 {
                     "buffType": "MaxStamina",
@@ -554,7 +554,7 @@
             "name": "Alyonka chocolate bar",
             "rarity": "4",
             "energyCost": 25,
-            "hydrationCost": -40,
+            "hydrationCost": -20,
             "buffs": [
                 {
                     "buffType": "MaxStamina",
@@ -593,7 +593,7 @@
             "name": "Can of green peas",
             "rarity": "2",
             "energyCost": 40,
-            "hydrationCost": 20,
+            "hydrationCost": 10,
             "buffs": [
                 {
                     "buffType": "SkillRate",
@@ -620,7 +620,7 @@
             "name": "Can of squash spread",
             "rarity": "3",
             "energyCost": 50,
-            "hydrationCost": 30,
+            "hydrationCost": 20,
             "buffs": [
                 {
                     "buffType": "SkillRate",
@@ -647,7 +647,7 @@
             "name": "Can of condensed milk",
             "rarity": "4",
             "energyCost": 40,
-            "hydrationCost": -90,
+            "hydrationCost": -80,
             "buffs": [
                 {
                     "buffType": "SkillRate",
@@ -673,7 +673,7 @@
             "id": "5bc9c29cd4351e003562b8a3",
             "name": "Can of sprats",
             "energyCost": 70,
-            "hydrationCost": -30,
+            "hydrationCost": -45,
             "rarity": "5",
             "buffs": [
                 {
@@ -824,7 +824,7 @@
             "name": "Iskra ration pack",
             "rarity": "3",
             "energyCost": 80,
-            "hydrationCost": -40,
+            "hydrationCost": -50,
             "buffs": [
                 {
                     "buffType": "EnergyRate",
@@ -853,7 +853,7 @@
             "name": "Canister with purified water",
             "rarity": "5",
             "energyCost": 100,
-            "hydrationCost": 25,
+            "hydrationCost": 100,
             "buffs": [
                 {
                     "buffType": "SkillRate",
@@ -929,7 +929,7 @@
             "name": "Salty Dog beef sausage",
             "rarity": "5",
             "energyCost": 50,
-            "hydrationCost": -20,
+            "hydrationCost": -35,
             "buffs": [
                 {
                     "buffType": "SkillRate",

@@ -24,7 +24,7 @@ namespace TarkovRPG
         [HarmonyPrefix]
         private static bool CreateShot(
             BallisticsCalculator __instance,
-            ref GClass2784? __result,
+            ref EftBulletClass __result,
             BulletClass __0,
             UnityEngine.Vector3 __1,
             UnityEngine.Vector3 __2,
@@ -33,9 +33,8 @@ namespace TarkovRPG
             Item __5,
             float __6 = 1f,
             int __7 = 0)
-        {
-
-            if (!ConfigRepository[Section.DamageSettings] || Plugin.Instance == null || !(__5 is Weapon weapon))
+		{
+			if (!ConfigRepository[Section.DamageSettings] || Plugin.Instance == null || !(__5 is Weapon weapon))
             {
                 return true;
             }
@@ -102,7 +101,7 @@ namespace TarkovRPG
 
             damage *= damageMult;
 
-            __result = GClass2784.Create(
+            __result = EftBulletClass.Create(
                 __0,
                 __7,
                 num1,
@@ -129,7 +128,7 @@ namespace TarkovRPG
                 null);
 
 #if DEBUG
-            Logger.LogMessage($"{weapon.Template.Name} {weapon.WeapClass} Bang! Damage (x{damageMult:F1}): {damage:F0}");
+            Logger.LogInfo($"{weapon.Template.Name} {weapon.WeapClass} Bang! Damage (x{damageMult:F1}): {damage:F0}");
 #endif
             return false;
         }
@@ -140,33 +139,29 @@ namespace TarkovRPG
             Player? __instance,
             ref List<ArmorComponent>? __result,
             ref DamageInfo __0,
-            EBodyPart __1,
-            int __2,
-            int __3,
-            bool __4)
+			EBodyPartColliderType __1,
+			EArmorPlateCollider __2,
+            bool __3)
         {
             if (!ConfigRepository[Section.ArmorSettings] || Instance == null || __instance == null)
                 return true;
 
-            var bodyPartType = __1;
-            var pitch = __2;
-            var yaw = __3;
-            var damageInfoIsLocal = __4;
+            var damageInfoIsLocal = __3;
 
             var _preAllocArmorComps = __instance.GetPrivateFieldValue<List<ArmorComponent>>("_preAllocatedArmorComponents");
             _preAllocArmorComps.Clear();
-            __instance.GetPrivatePropertyValue<Inventory>("Inventory").GetPutOnArmorsNonAlloc(_preAllocArmorComps);
+            __instance.Inventory.GetPutOnArmorsNonAlloc(_preAllocArmorComps);
 
             List<ArmorComponent> armorComponentList = new List<ArmorComponent>();
 
             var armorClass = 0;
-            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass2568.InvincibleBalaclava);
+            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass2757.InvincibleBalaclava);
 
             foreach (ArmorComponent allocatedArmorComponent in _preAllocArmorComps)
             {
                 float armorDamage = 0.0f;
 
-                if (allocatedArmorComponent.ShotMatches(bodyPartType, pitch, yaw))
+                if (allocatedArmorComponent.ShotMatches(__1, __2))
                 {
                     armorClass = Math.Max(armorClass, allocatedArmorComponent.ArmorClass);
 
@@ -175,7 +170,15 @@ namespace TarkovRPG
                     if (__instance.GetPrivateFieldValue<IHealthController>("_healthController").IsAlive)
                     {
                         var damage = __0.Damage;
-                        armorDamage = allocatedArmorComponent.ApplyDamage(ref __0, bodyPartType, damageInfoIsLocal, __instance.Skills.LightVestMeleeWeaponDamageReduction, __instance.Skills.HeavyVestBluntThroughputDamageReduction);
+                        armorDamage = allocatedArmorComponent.ApplyDamage(
+                            ref __0, 
+                            __1,
+                            __2,
+                            damageInfoIsLocal,
+                            _preAllocArmorComps,
+                            __instance.Skills.LightVestMeleeWeaponDamageReduction, 
+                            __instance.Skills.HeavyVestBluntThroughputDamageReduction);
+
                         __0.Damage = damage;
 
                         if (allocatedArmorComponent.Buff.IsActive && allocatedArmorComponent.Buff.BuffType == ERepairBuffType.DamageReduction)
@@ -198,7 +201,7 @@ namespace TarkovRPG
                 }
 
                 if ((double)armorDamage > 0.10000000149011612)
-                    __instance.CallPrivateMethod("OnArmorPointsChanged", allocatedArmorComponent, false);
+                    __instance.OnArmorPointsChanged(allocatedArmorComponent);
             }
 
             if (flag3)
@@ -246,10 +249,12 @@ namespace TarkovRPG
         [HarmonyPostfix]
         private static void ApplyShot(
             Player __instance,
-            GClass1560? __result,
+			GClass1676? __result,
             DamageInfo __0,
             EBodyPart __1,
-            GStruct304 __2)
+			EBodyPartColliderType __2,
+			EArmorPlateCollider __3,
+			GStruct390 __4)
         {
             if (!ConfigRepository[Section.ArmorSettings])
                 return;
@@ -258,6 +263,7 @@ namespace TarkovRPG
             var bodyPartType = __1;
 
             damageInfo.BleedBlock = true;
+            damageInfo.DamageType = EDamageType.Impact;
 
             var bodyPart = __instance.HealthController.GetBodyPartHealth(bodyPartType);
 
@@ -279,25 +285,26 @@ namespace TarkovRPG
                     part,
                     massDamage,
                     damageInfo);
+
 #if DEBUG
-                bodyPart = __instance.HealthController.GetBodyPartHealth(part);
+				bodyPart = __instance.HealthController.GetBodyPartHealth(part);
 
                 stringBuilder.AppendLine($"{part}:{bodyPart.Current:F0}/{bodyPart.Maximum:F0}");
 #endif
             }
 
 #if DEBUG
-            Logger.LogMessage(stringBuilder.ToString());
+            Logger.LogInfo(stringBuilder.ToString());
 #endif
         }
 
-        [HarmonyPatch(typeof(GClass1119), "ToColor")]
+        [HarmonyPatch(typeof(GClass1207), "ToColor")]
         [HarmonyPostfix]
         private static void ToColor(
             ref UnityEngine.Color __result,
             TaxonomyColor __0)
         {
-            if (!ConfigRepository[Section.ColorSettings])
+			if (!ConfigRepository[Section.ColorSettings])
                 return; 
 
             if (__0 == TaxonomyColor.green)

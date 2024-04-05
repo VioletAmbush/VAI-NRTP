@@ -170,8 +170,8 @@
         {
             "id": "587df583245977373c4f1129",
             "name": "SKS-A5 7.62x39mm R-20",
-            "rarity": "1",
-            "magLoadPercent": -40
+            "rarity": "2",
+            "magLoadPercent": -45
         },
         {
             "id": "61695095d92c473c7702147a",
@@ -315,10 +315,22 @@
             "magLoadPercent": -45
         },
         {
+            "id": "649ec30cb013f04a700e60fb",
+            "name": "AK-12 (Old) 5.45x39mm R-30",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
             "id": "55d481904bdc2d8c2f8b456a",
             "name": "6L23 PLUM 5.45x39mm R-45",
             "rarity": "3",
             "magLoadPercent": -50
+        },
+        {
+            "id": "5bed61680db834001d2c45ab",
+            "name": "AK-12 R-30",
+            "rarity": "4",
+            "magLoadPercent": -60
         },
         {
             "id": "55d482194bdc2d1d4e8b456b",
