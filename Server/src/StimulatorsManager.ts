@@ -1,8 +1,8 @@
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem"
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem"
 import { AbstractModManager } from "./AbstractModManager"
 import { Helper } from "./Helper"
 import { Constants } from "./Constants"
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables"
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables"
 
 
 export class StimulatorsManager extends AbstractModManager
@@ -55,13 +55,13 @@ export class StimulatorsManager extends AbstractModManager
 
         if (config.removeGoldenStarContusion)
         {
-            const effects: any[] = []
+            const effects: any = {}
 
             for (let effect in item._props.effects_damage)
             {
                 if (effect !== "Contusion")
                 {
-                    effects.push(effect)
+                    effects[effect] = item._props.effects_damage[effect]
                 }
             }
 

@@ -1,8 +1,8 @@
 import { DependencyContainer } from "tsyringe"
 
-import { IPreAkiLoadMod } from "@spt-aki/models/external/IPreAkiLoadMod"
-import { IPostDBLoadMod } from "@spt-aki/models/external/IPostDBLoadMod"
-import { IPostAkiLoadMod } from "@spt-aki/models/external/IPostAkiLoadMod"
+import { IPreSptLoadMod } from "@spt/models/external/IPreSptLoadMod"
+import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod"
+import { IPostSptLoadMod } from "@spt/models/external/IPostSptLoadMod"
 
 import { AbstractModManager } from "./AbstractModManager";
 
@@ -19,7 +19,7 @@ import { ArmorManager } from "./ArmorManager"
 import { WeaponsManager } from "./WeaponsManager"
 import { EffectsManager } from "./EffectsManager"
 
-export class ModManager implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod
+export class ModManager implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
 {
     private managers: AbstractModManager[] = []
 
@@ -39,9 +39,9 @@ export class ModManager implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadM
         this.managers.push(new EffectsManager)
     }
 
-    public preAkiLoad(container: DependencyContainer): void
+    public preSptLoad(container: DependencyContainer): void
     {
-        this.managers.forEach(m => m.preAkiLoad(container))
+        this.managers.forEach(m => m.preSptLoad(container))
     }
   
     public postDBLoad(container: DependencyContainer): void 
@@ -49,9 +49,9 @@ export class ModManager implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadM
         this.managers.forEach(m => m.postDBLoad(container))
     }
 
-    public postAkiLoad(container: DependencyContainer): void 
+    public postSptLoad(container: DependencyContainer): void 
     {
-        this.managers.forEach(m => m.postAkiLoad(container))
+        this.managers.forEach(m => m.postSptLoad(container))
     }
 }
 

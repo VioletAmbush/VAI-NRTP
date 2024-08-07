@@ -20,7 +20,9 @@ namespace TarkovRPG
             ConfigRepository = new ConfigRepository(Config);
 
             Harmony.CreateAndPatchAll(typeof(Patches));
-        }
+
+			Logger.LogInfo($"[{PluginInfo.PLUGIN_NAME}] loaded!");
+		}
 
         private void OnEnable()
         {

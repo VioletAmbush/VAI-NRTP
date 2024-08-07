@@ -1,15 +1,15 @@
 import { DependencyContainer } from "tsyringe"
 
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger"
-import { JsonUtil } from "@spt-aki/utils/JsonUtil"
+import { ILogger } from "@spt/models/spt/utils/ILogger"
+import { JsonUtil } from "@spt/utils/JsonUtil"
 
-import { IPreAkiLoadMod } from "@spt-aki/models/external/IPreAkiLoadMod"
-import { IPostDBLoadMod } from "@spt-aki/models/external/IPostDBLoadMod"
-import { IPostAkiLoadMod } from "@spt-aki/models/external/IPostAkiLoadMod"
-import { DatabaseServer } from "@spt-aki/servers/DatabaseServer"
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables"
+import { IPreSptLoadMod } from "@spt/models/external/IPreSptLoadMod"
+import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod"
+import { IPostSptLoadMod } from "@spt/models/external/IPostSptLoadMod"
+import { DatabaseServer } from "@spt/servers/DatabaseServer"
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables"
 
-export abstract class AbstractModManager implements IPreAkiLoadMod, IPostDBLoadMod, IPostAkiLoadMod
+export abstract class AbstractModManager implements IPreSptLoadMod, IPostDBLoadMod, IPostSptLoadMod
 {
     protected abstract configName: string
     protected config: any
@@ -20,15 +20,15 @@ export abstract class AbstractModManager implements IPreAkiLoadMod, IPostDBLoadM
 
     protected databaseTables: IDatabaseTables
 
-    protected preAkiInitialized: boolean = false
+    protected preSptInitialized: boolean = false
     protected postDBInitialized: boolean = false
-    protected postAkiInitialized: boolean = false
+    protected postSptInitialized: boolean = false
 
-    public preAkiLoad(container: DependencyContainer): void
+    public preSptLoad(container: DependencyContainer): void
     {
-        if (!this.preAkiInitialized)
+        if (!this.preSptInitialized)
         {
-            this.preAkiInitialize(container)
+            this.preSptInitialize(container)
         }
 
         if (this.config.enabled != true)
@@ -36,15 +36,15 @@ export abstract class AbstractModManager implements IPreAkiLoadMod, IPostDBLoadM
             return
         }
 
-        this.afterPreAki()
+        this.afterPreSpt()
 
     }
 
     public postDBLoad(container: DependencyContainer): void
     {
-        if (!this.preAkiInitialized)
+        if (!this.preSptInitialized)
         {
-            this.preAkiInitialize(container)
+            this.preSptInitialize(container)
         }
 
         if (this.config.enabled != true)
@@ -60,11 +60,11 @@ export abstract class AbstractModManager implements IPreAkiLoadMod, IPostDBLoadM
         this.afterPostDB()
     }
 
-    public postAkiLoad(container: DependencyContainer): void 
+    public postSptLoad(container: DependencyContainer): void 
     {
-        if (!this.preAkiInitialized)
+        if (!this.preSptInitialized)
         {
-            this.preAkiInitialize(container)
+            this.preSptInitialize(container)
         }
 
         if (this.config.enabled != true)
@@ -77,19 +77,19 @@ export abstract class AbstractModManager implements IPreAkiLoadMod, IPostDBLoadM
             this.postDBInitialize(container)
         }
 
-        if (!this.postAkiInitialized)
+        if (!this.postSptInitialized)
         {
-            this.postAkiInitialize(container)
+            this.postSptInitialize(container)
         }
 
-        this.afterPostAki()
+        this.afterPostSpt()
     }
 
-    protected preAkiInitialize(container: DependencyContainer): void
+    protected preSptInitialize(container: DependencyContainer): void
     {
         this.config = require(`../config/${this.configName}.json`)
         
-        this.preAkiInitialized = true
+        this.preSptInitialized = true
     }
 
     protected postDBInitialize(container: DependencyContainer): void
@@ -105,14 +105,14 @@ export abstract class AbstractModManager implements IPreAkiLoadMod, IPostDBLoadM
         this.postDBInitialized = true
     }
 
-    protected postAkiInitialize(container: DependencyContainer): void
+    protected postSptInitialize(container: DependencyContainer): void
     {
 
     }
 
-    protected afterPreAki(): void {}
+    protected afterPreSpt(): void {}
 
     protected afterPostDB(): void {}
 
-    protected afterPostAki(): void {}
+    protected afterPostSpt(): void {}
 }

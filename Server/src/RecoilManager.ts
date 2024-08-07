@@ -1,4 +1,4 @@
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem"
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem"
 import { AbstractModManager } from "./AbstractModManager"
 import { Constants } from "./Constants"
 
@@ -15,7 +15,7 @@ export class RecoilManager extends AbstractModManager
 
             if (item._props.RecoilForceBack && 
                 item._props.RecoilForceUp &&
-                item._props.CameraRecoil)
+                item._props.RecoilCamera)
             {
                 if (item._props.weapFireType.includes("fullauto"))
                 {
@@ -35,6 +35,6 @@ export class RecoilManager extends AbstractModManager
     {
         item._props.RecoilForceBack *= recoilMultiplier
         item._props.RecoilForceUp *= recoilMultiplier
-        item._props.CameraRecoil *= recoilMultiplier
+        item._props.RecoilCamera *= recoilMultiplier
     }
 }

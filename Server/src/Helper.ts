@@ -1,6 +1,5 @@
-import { Buff } from "@spt-aki/models/eft/common/IGlobals"
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem"
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables"
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem"
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables"
 import { ConfigMapper } from "./ConfigMapper"
 import { Constants } from "./Constants"
 

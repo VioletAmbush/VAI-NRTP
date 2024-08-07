@@ -1,4 +1,4 @@
-import { Probability } from "@spt-aki/models/eft/common/IGlobals"
+import { IProbability } from "@spt/models/eft/common/IGlobals"
 import { AbstractModManager } from "./AbstractModManager"
 import { Constants } from "./Constants"
 
@@ -33,7 +33,7 @@ export class EffectsManager extends AbstractModManager
         console.log(`${Constants.ModTitle}: Effects changes applied!`)
     }
 
-    private setProbability(prob: Probability, config: any)
+    private setProbability(prob: IProbability, config: any)
     {
         prob.Threshold = config.T
         prob.K = config.K

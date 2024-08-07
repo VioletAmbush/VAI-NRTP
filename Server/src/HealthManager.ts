@@ -1,12 +1,9 @@
 import { AbstractModManager } from "./AbstractModManager";
 
-import { Health as TypeHealth } from "@spt-aki/models/eft/common/tables/IBotType"; 
-import { Health as BaseHealth } from "@spt-aki/models/eft/common/tables/IBotBase";
-import { IProfileSides } from "@spt-aki/models/eft/common/tables/IProfileTemplate";
+import { Health as TypeHealth } from "@spt/models/eft/common/tables/IBotType"; 
+import { Health as BaseHealth } from "@spt/models/eft/common/tables/IBotBase";
+import { IProfileSides } from "@spt/models/eft/common/tables/IProfileTemplate";
 import { Constants } from "./Constants"
-import { StaticRouterModService } from "@spt-aki/services/mod/staticRouter/StaticRouterModService"
-import { DependencyContainer } from "tsyringe"
-import type { ProfileHelper } from "@spt-aki/helpers/ProfileHelper"
 
 export class HealthManager extends AbstractModManager
 {

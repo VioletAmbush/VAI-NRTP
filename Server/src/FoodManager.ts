@@ -1,11 +1,9 @@
-import { ITemplateItem, IHealthEffect } from "@spt-aki/models/eft/common/tables/ITemplateItem"
+import { ITemplateItem, IHealthEffect } from "@spt/models/eft/common/tables/ITemplateItem"
 
 import { AbstractModManager } from "./AbstractModManager"
 import { Helper } from "./Helper"
-import { ConfigMapper } from "./ConfigMapper"
 import { Constants } from "./Constants"
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables"
-import { IProfileSides } from "@spt-aki/models/eft/common/tables/IProfileTemplate"
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables"
 
 
 export class FoodManager extends AbstractModManager

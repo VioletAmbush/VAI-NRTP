@@ -1,6 +1,6 @@
 {
     "enabled": true,
     
-    "recoilAutoMultiplier": 0.6,
-    "recoilSingleMultiplier": 0.75
+    "recoilAutoMultiplier": 0.9,
+    "recoilSingleMultiplier": 0.95
 }

@@ -1,4 +1,4 @@
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem"
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem"
 import { AbstractModManager } from "./AbstractModManager"
 import { Helper } from "./Helper"
 import { Constants } from "./Constants"

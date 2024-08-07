@@ -1,11 +1,11 @@
 import { DependencyContainer } from "tsyringe"
 import { AbstractModManager } from "./AbstractModManager"
-import { ILocationConfig } from "@spt-aki/models/spt/config/ILocationConfig"
-import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes"
-import { ConfigServer } from "@spt-aki/servers/ConfigServer"
+import { ILocationConfig } from "@spt/models/spt/config/ILocationConfig"
+import { ConfigTypes } from "@spt/models/enums/ConfigTypes"
+import { ConfigServer } from "@spt/servers/ConfigServer"
 import { Constants } from "./Constants"
-import { ILocationData } from "@spt-aki/models/spt/server/ILocations"
-import { ILocationBase } from "@spt-aki/models/eft/common/ILocationBase"
+import { ILocation } from "@spt/models/eft/common/ILocation"
+import { ILocationBase } from "@spt/models/eft/common/ILocationBase"
 
 
 export class GlobalsManager extends AbstractModManager
@@ -17,9 +17,9 @@ export class GlobalsManager extends AbstractModManager
 
     private locationConfig: ILocationConfig
 
-    protected postAkiInitialize(container: DependencyContainer): void 
+    protected postSptInitialize(container: DependencyContainer): void 
     {
-        super.postAkiInitialize(container)
+        super.postSptInitialize(container)
 
         const configServer = container.resolve<ConfigServer>("ConfigServer")
         this.locationConfig = configServer.getConfig<ILocationConfig>(ConfigTypes.LOCATION)
@@ -44,7 +44,7 @@ export class GlobalsManager extends AbstractModManager
         this.tryRemoveRunThroughs()
     }
 
-    protected afterPostAki(): void
+    protected afterPostSpt(): void
     {
         this.setLootMultipliers()
 
@@ -110,13 +110,13 @@ export class GlobalsManager extends AbstractModManager
 
         for (let locKey in this.databaseTables.locations)
         {
-            const loc: ILocationData = this.databaseTables.locations[locKey]
+            const loc: ILocation = this.databaseTables.locations[locKey]
 
             if (loc?.base && !this.ignoredLocations.includes(locKey))
             {
-                for (let exitKey in loc.base.exits)
+                for (let exitKey in loc.allExtracts)
                 {
-                    loc.base.exits[exitKey].Chance = 100
+                    loc.allExtracts[exitKey].Chance = 100
                 }
             }
         }

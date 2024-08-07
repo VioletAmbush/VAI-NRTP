@@ -113,7 +113,7 @@ namespace TarkovRPG
                 __0.BulletDiameterMilimeters,
                 (float)damage,
                 BallisticsCalculator.GetAmmoPenetrationPower(__0, num1, __instance.Randoms),
-                __0.PenetrationChance,
+                __0.PenetrationChanceObstacle,
                 __0.RicochetChance,
                 __0.FragmentationChance,
                 1f,
@@ -130,7 +130,7 @@ namespace TarkovRPG
 #if DEBUG
             Logger.LogInfo($"{weapon.Template.Name} {weapon.WeapClass} Bang! Damage (x{damageMult:F1}): {damage:F0}");
 #endif
-            return false;
+			return false;
         }
 
         [HarmonyPatch(typeof(Player), "ProceedDamageThroughArmor")]
@@ -155,7 +155,7 @@ namespace TarkovRPG
             List<ArmorComponent> armorComponentList = new List<ArmorComponent>();
 
             var armorClass = 0;
-            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass2757.InvincibleBalaclava);
+            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass2773.InvincibleBalaclava);
 
             foreach (ArmorComponent allocatedArmorComponent in _preAllocArmorComps)
             {
@@ -249,12 +249,12 @@ namespace TarkovRPG
         [HarmonyPostfix]
         private static void ApplyShot(
             Player __instance,
-			GClass1676? __result,
+			ShotInfoClass? __result,
             DamageInfo __0,
             EBodyPart __1,
 			EBodyPartColliderType __2,
 			EArmorPlateCollider __3,
-			GStruct390 __4)
+			GStruct389 __4)
         {
             if (!ConfigRepository[Section.ArmorSettings])
                 return;
@@ -298,7 +298,7 @@ namespace TarkovRPG
 #endif
         }
 
-        [HarmonyPatch(typeof(GClass1207), "ToColor")]
+        [HarmonyPatch(typeof(GClass1216), "ToColor")]
         [HarmonyPostfix]
         private static void ToColor(
             ref UnityEngine.Color __result,

@@ -1,8 +1,8 @@
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem"
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem"
 import { AbstractModManager } from "./AbstractModManager"
 import { Helper } from "./Helper"
 import { Constants } from "./Constants"
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables"
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables"
 
 
 export class HealingManager extends AbstractModManager
@@ -54,7 +54,7 @@ export class HealingManager extends AbstractModManager
             ]
 
             item._props.StimulatorBuffs = buffName
-            item._props.effects_damage = []
+            item._props.effects_damage = {}
             item._parent = "5448f3a14bdc2d27728b4569"
         }
 
