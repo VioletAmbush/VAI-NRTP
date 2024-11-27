@@ -53,6 +53,7 @@
             "rarity": "1"
         },
 
+
         {
             "id": "5de652c31b7e3716273428be",
             "name": "Molot VPO-215 \"Gornostay\" .366 TKM",
@@ -144,6 +145,11 @@
             "rarity": "2"
         },
         {
+            "id": "66992b349950f5f4cd06029f",
+            "name": "IWI UZI 9x19",
+            "rarity": "2"
+        },
+        {
             "id": "57f4c844245977379d5c14d1",
             "name": "PP-9 \"Klin\" 9x18PMM",
             "rarity": "2"
@@ -214,11 +220,17 @@
             "rarity": "2"
         },
         {
+            "id": "644674a13d52156624001fbc",
+            "name": "KBP 9A91 9x39",
+            "rarity": "2"
+        },
+
+
+        {
             "id": "6410733d5dd49d77bd07847e",
             "name": "AVT-40 7.62x54R",
             "rarity": "3"
         },
-        
         {
             "id": "5f36a0e5fbf956000b716b65",
             "name": "Colt M45A1 .45 ACP",
@@ -257,11 +269,6 @@
         {
             "id": "56dee2bdd2720bc8328b4567",
             "name": "MP-153 12ga",
-            "rarity": "3"
-        },
-        {
-            "id": "576165642459773c7a400233",
-            "name": "Saiga 12ga ver.10 12/76",
             "rarity": "3"
         },
         {
@@ -414,6 +421,27 @@
             "name": "Steyr AUG A3 5.56x45",
             "rarity": "3"
         },
+        {
+            "id": "6718817435e3cfd9550d2c27",
+            "name": "Steyr AUG A3 Black 5.56x45",
+            "rarity": "3"
+        },
+        {
+            "id": "6513ef33e06849f06c0957ca",
+            "name": "RPD 7.62x39",
+            "rarity": "3"
+        },
+        {
+            "id": "645e0c6b3b381ede770e1cc9",
+            "name": "KBP VSK-94 9x39",
+            "rarity": "3"
+        },
+        {
+            "id": "669fa409933e898cce0c2166",
+            "name": "Deagle .357",
+            "rarity": "3"
+        },
+
 
         {
             "id": "5447a9cd4bdc2dbd208b4567",
@@ -436,6 +464,16 @@
             "rarity": "4"
         },
         {
+            "id": "6680304edadb7aa61d00cef0",
+            "name": "IWI UZI PRO Pistol 9x19",
+            "rarity": "4"
+        },
+        {
+            "id": "668e71a8dadf42204c032ce1",
+            "name": "IWI UZI PRO SMG 9x19",
+            "rarity": "4"
+        },
+        {
             "id": "5de7bd7bfd6b4e6e2276dc25",
             "name": "B&T MP9-N 9x19",
             "rarity": "4"
@@ -453,6 +491,11 @@
         {
             "id": "628a60ae6b1d481ff772e9c8",
             "name": "Rifle Dynamics RD-704 7.62x39",
+            "rarity": "4"
+        },
+        {
+            "id": "65268d8ecb944ff1e90ea385",
+            "name": "RPDN 7.62x39",
             "rarity": "4"
         },
         {
@@ -495,6 +538,42 @@
             "name": "Chiappa Rhino 50DS .357",
             "rarity": "4"
         },
+        {
+            "id": "65fb023261d5829b2d090755",
+            "name": "M60E4 7.62x51",
+            "rarity": "4"
+        },
+        {
+            "id": "669fa3f88abd2662d80eee77",
+            "name": "Deagle L5 .50",
+            "rarity": "4"
+        },
+        {
+            "id": "669fa39b48fc9f8db6035a0c",
+            "name": "Deagle L6 .50",
+            "rarity": "4"
+        },
+        {
+            "id": "669fa3d876116c89840b1217",
+            "name": "Deagle L6 WTS .50",
+            "rarity": "4"
+        },
+        {
+            "id": "668fe5a998b5ad715703ddd6",
+            "name": "Deagle XIX .50",
+            "rarity": "4"
+        },
+        {
+            "id": "576165642459773c7a400233",
+            "name": "Saiga 12ga ver.10 12/76",
+            "rarity": "4"
+        },
+        {
+            "id": "66ffa9b66e19cc902401c5e8",
+            "name": "AA-12 Gen 1 12ga",
+            "rarity": "4"
+        },
+
 
         {
             "id": "606587252535c57a13424cfd",
@@ -532,8 +611,18 @@
             "rarity": "5"
         },
         {
+            "id": "65290f395ae2ae97b80fdf2d",
+            "name": "SPEAR 6.8x51",
+            "rarity": "5"
+        },
+        {
             "id": "5fb64bc92b1b027b1f50bcf2",
             "name": "TDI KRISS Vector Gen.2 .45 ACP",
+            "rarity": "5"
+        },
+        {
+            "id": "651450ce0e00edc794068371",
+            "name": "SR3M 9x39",
             "rarity": "5"
         },
         {
@@ -556,6 +645,27 @@
             "name": "HK MP7A2 4.6x30",
             "rarity": "5"
         },
+        {
+            "id": "64637076203536ad5600c990",
+            "name": "PKM 7.62x54R",
+            "rarity": "5"
+        },
+        {
+            "id": "661ceb1b9311543c7104149b",
+            "name": "M60E6 7.62x51",
+            "rarity": "5"
+        },
+        {
+            "id": "661cec09b2c6356b4d0c7a36",
+            "name": "M60E6 FDE 7.62x51",
+            "rarity": "5"
+        },
+        {
+            "id": "67124dcfa3541f2a1f0e788b",
+            "name": "AA-12 Gen 2 12ga",
+            "rarity": "5"
+        },
+
 
         {
             "id": "633ec7c2a6918cb895019c6c",
@@ -615,6 +725,11 @@
         {
             "id": "64748d02d1c009260702b526",
             "name": "MP-43 sawed-off 12ga",
+            "rarity": "6"
+        },
+        {
+            "id": "64ca3d3954fc657e230529cc",
+            "name": "PKP 7.62x54R",
             "rarity": "6"
         },
 

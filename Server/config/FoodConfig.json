@@ -503,6 +503,20 @@
             ]
         },
         {
+            "id": "656df4fec921ad01000481a2",
+            "name": "Instant noodles",
+            "rarity": "1",
+            "energyCost": 25,
+            "hydrationCost": -15,
+            "buffs": [
+                {
+                    "buffType": "StaminaRate",
+                    "duration": 3600,
+                    "value": 0.1
+                }
+            ]
+        },
+        {
             "id": "57347d90245977448f7b7f65",
             "name": "Pack of oat flakes",
             "rarity": "2",
@@ -924,6 +938,21 @@
             ]
         },
 
+        {
+            "id": "65815f0e647e3d7246384e14",
+            "name": "Tarker dried meat",
+            "rarity": "3",
+            "energyCost": 40,
+            "hydrationCost": -30,
+            "buffs": [
+                {
+                    "buffType": "SkillRate",
+                    "duration": 1200,
+                    "value": 20,
+                    "skillName": "Surgery"
+                }
+            ]
+        },
         {
             "id": "635a758bfefc88a93f021b8a",
             "name": "Salty Dog beef sausage",

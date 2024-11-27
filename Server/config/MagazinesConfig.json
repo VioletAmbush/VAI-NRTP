@@ -7,6 +7,12 @@
     "magLoadMultiplier": 2,
 
     "items": [
+        {
+            "id": "66015dc4aaad2f54cb04c56a",
+            "name": "Toy gun Blicky R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
 
         {
             "id": "5aaa5e60e5b5b000140293d6",
@@ -138,7 +144,7 @@
             "id": "5c6592372e221600133e47d7",
             "name": "MAG5-100 STANAG 5.56x45mm R-100",
             "rarity": "5",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         },
         {
             "id": "5c6d46132e221601da357d56",
@@ -150,7 +156,7 @@
             "id": "59c1383d86f774290a37e0ca",
             "name": "PMAG D-60 STANAG 5.56x45mm R-60",
             "rarity": "5",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         },
         {
             "id": "544a37c44bdc2d25388b4567",
@@ -188,6 +194,12 @@
         {
             "id": "5b1fd4e35acfc40018633c39",
             "name": "AK AL 7.62x39mm R-10",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "64b9cf0ac12b9c38db26923a",
+            "name": "AK PMAG 7.62x39mm R-20",
             "rarity": "1",
             "magLoadPercent": -40
         },
@@ -281,12 +293,24 @@
             "rarity": "4",
             "magLoadPercent": -60
         },
+        {
+            "id": "6513f0a194c72326990a3868",
+            "name": "Buben 7.62x39mm R-100",
+            "rarity": "5",
+            "magLoadPercent": -75
+        },
 
 
 
         {
             "id": "55d4837c4bdc2d1d4e8b456c",
             "name": "SAIGA 545 5.45x39mm R-10",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "64b9e265c94d0d15c5027e35",
+            "name": "Delta tek 5.45x39mm R-20",
             "rarity": "1",
             "magLoadPercent": -40
         },
@@ -322,13 +346,13 @@
         },
         {
             "id": "55d481904bdc2d8c2f8b456a",
-            "name": "6L23 PLUM 5.45x39mm R-45",
+            "name": "6L26 5.45x39mm R-45",
             "rarity": "3",
             "magLoadPercent": -50
         },
         {
             "id": "5bed61680db834001d2c45ab",
-            "name": "AK-12 R-30",
+            "name": "AK-12 5.45x39mm R-30",
             "rarity": "4",
             "magLoadPercent": -60
         },
@@ -342,29 +366,44 @@
             "id": "564ca9df4bdc2d35148b4569",
             "name": "6L18 5.45x39mm R-45",
             "rarity": "5",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         },
         {
             "id": "5bed625c0db834001c062946",
             "name": "RPK-16 DRUM 5.45x39mm R-95",
             "rarity": "5",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         },
 
 
 
+        {
+            "id": "57838f0b2459774a256959b2",
+            "name": "6L24 9x39mm R-10",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "57838f9f2459774a150289a0",
+            "name": "6L25 9x39mm R-20",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "6450ec2e7da7133e5a09ca96",
+            "name": "9A91 9x39mm R-20",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
         {
             "id": "5a9e81fba2750c00164f6b11",
             "name": "SR3M 9x39mm R-30",
             "rarity": "4",
             "magLoadPercent": -60
         },
-
-
-
         {
-            "id": "628120fd5631d45211793c9f",
-            "name": "AXMC 338 8.6x70mm LM R-10",
+            "id": "65118f531b90b4fc77015083",
+            "name": "VSSVAL 9x39mm R-30",
             "rarity": "4",
             "magLoadPercent": -60
         },
@@ -417,7 +456,7 @@
             "id": "5b7bef9c5acfc43d102852ec",
             "name": "X-FAL 7.62x51mm R-60",
             "rarity": "5",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         },
         {
             "id": "5df8f535bb49d91fb446d6b0",
@@ -428,6 +467,12 @@
         {
             "id": "5888988e24597752fe43a6fa",
             "name": "DVL-10 7.62x51mm R-10",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "64b9e2037fdfb81df81e3c25",
+            "name": "M1A 7.62x51mm R-10",
             "rarity": "2",
             "magLoadPercent": -45
         },
@@ -511,7 +556,7 @@
         },
         {
             "id": "5df25b6c0b92095fd441e4cf",
-            "name": "T-6000M 7.62x51mm R-5",
+            "name": "T-5000M 7.62x51mm R-5",
             "rarity": "3",
             "magLoadPercent": -50
         },
@@ -531,7 +576,7 @@
             "id": "5addccf45acfc400185c2989",
             "name": "X-14 7.62x51mm R-60",
             "rarity": "5",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         },
         {
             "id": "6183d53f1cb55961fa0fdcda",
@@ -546,10 +591,22 @@
             "magLoadPercent": -60
         },
         {
-            "id": "628120f210e26c1f344e6558",
-            "name": "AXMC 308 7.62x51mm R-10",
+            "id": "65293c38fc460e50a509cb25",
+            "name": "L7AWM 7.62x51mm R-20",
             "rarity": "4",
-            "magLoadPercent": -60
+            "magLoadPercent": -65
+        },
+        {
+            "id": "65293c7a17e14363030ad308",
+            "name": "L7AWM 7.62x51mm R-25",
+            "rarity": "5",
+            "magLoadPercent": -70
+        },
+        {
+            "id": "660ea4453786cc0af808a1be",
+            "name": "Box 7.62x51mm R-100",
+            "rarity": "5",
+            "magLoadPercent": -75
         },
 
 
@@ -573,6 +630,18 @@
             "magLoadPercent": -45
         },
         {
+            "id": "6422e1ea3c0f06190302161a",
+            "name": "SVT-40 7.62x54R R-10",
+            "rarity": "2",
+            "magLoadPercent": -45
+        },
+        {
+            "id": "641074a07fd350b98c0b3f96",
+            "name": "AVT-40 7.62x54R R-15",
+            "rarity": "3",
+            "magLoadPercent": -45
+        },
+        {
             "id": "5c471c442e221602b542a6f8",
             "name": "SVD 7.62x54R R-10",
             "rarity": "3",
@@ -584,14 +653,17 @@
             "rarity": "4",
             "magLoadPercent": -60
         },
-
-
-
         {
-            "id": "5fc23426900b1d5091531e15",
-            "name": "MK-18 .338 R-10",
-            "rarity": "4",
-            "magLoadPercent": -60
+            "id": "646372518610c40fc20204e8",
+            "name": "PKP 7.62x54R R-100",
+            "rarity": "5",
+            "magLoadPercent": -75
+        },
+        {
+            "id": "65785979bec02a3fe82c181e",
+            "name": "PKTM 7.62x54R R-250",
+            "rarity": "6",
+            "magLoadPercent": -75
         },
 
 
@@ -600,6 +672,21 @@
             "id": "5de653abf76fdc1ce94a5a2a",
             "name": "VPO215 .366 R-4",
             "rarity": "1",
+            "magLoadPercent": -40
+        },
+        
+
+
+        {
+            "id": "669fa435803b94fb5d0e3a76",
+            "name": "Deagle .357 R-9",
+            "rarity": "2",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "668fe5c5f35310705d02b696",
+            "name": "Deagle .50 R-7",
+            "rarity": "2",
             "magLoadPercent": -40
         },
 
@@ -648,7 +735,7 @@
             "id": "55d485be4bdc2d962f8b456f",
             "name": "PM DRUM 9x18mm R-84",
             "rarity": "5",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         },
 
 
@@ -682,9 +769,24 @@
         },
         {
             "id": "5cc70093e4a949033c734312",
-            "name": "P90 5.7x28mm R-60",
+            "name": "P90 5.7x28mm R-50",
             "rarity": "3",
             "magLoadPercent": -50
+        },
+
+
+
+        {
+            "id": "628120fd5631d45211793c9f",
+            "name": "AXMC .338 LM R-10",
+            "rarity": "4",
+            "magLoadPercent": -60
+        },
+        {
+            "id": "5fc23426900b1d5091531e15",
+            "name": "MK-18 .338 LM R-10",
+            "rarity": "4",
+            "magLoadPercent": -60
         },
 
 
@@ -696,39 +798,39 @@
             "magLoadPercent": -40
         },
         {
-            "id": "5ef3448ab37dfd6af863525c",
-            "name": "MEC-GAR 11.43x23mm R-11",
-            "rarity": "1",
+            "id": "5f3e77b26cda304dcc634057",
+            "name": "WILSON 11.43x23mm R-7",
+            "rarity": "2",
             "magLoadPercent": -40
         },
         {
-            "id": "5f3e77b26cda304dcc634057",
-            "name": "WILSON 11.43x23mm R-7",
-            "rarity": "1",
+            "id": "5ef3448ab37dfd6af863525c",
+            "name": "MEC-GEAR 11.43x23mm R-11",
+            "rarity": "3",
             "magLoadPercent": -40
         },
         {
             "id": "5fc3e466187fea44d52eda90",
             "name": "UMP 45 11.43x23mm R-25",
-            "rarity": "1",
+            "rarity": "2",
             "magLoadPercent": -40
         },
         {
             "id": "6193d338de3cdf1d2614a6fc",
             "name": "USP45 11.43x23mm R-12",
-            "rarity": "2",
+            "rarity": "1",
             "magLoadPercent": -45
         },
         {
             "id": "6193d3149fb0c665d5490e32",
             "name": "USP45T 11.43x23mm R-12",
-            "rarity": "3",
+            "rarity": "2",
             "magLoadPercent": -50
         },
         {
             "id": "5fb651b52b1b027b1f50bcff",
             "name": "GLOCK.45 11.43x23mm R-13",
-            "rarity": "2",
+            "rarity": "1",
             "magLoadPercent": -45
         },
         {
@@ -757,6 +859,54 @@
             "name": "SG-919 9x19mm R-20",
             "rarity": "1",
             "magLoadPercent": -40
+        },
+        {
+            "id": "66992713ae08c5c29e0c4f97",
+            "name": "UZI 9x19mm R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "668031ffe3e7eb26e8004cdd",
+            "name": "UZI PRO 9x19mm R-20",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "6699271b9950f5f4cd060299",
+            "name": "UZI 9x19mm R-25",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "66866f4ec3d473265104f381",
+            "name": "UZI PRO 9x19mm R-25",
+            "rarity": "1",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "669927203c4fda6471005cbe",
+            "name": "UZI 9x19mm R-32",
+            "rarity": "2",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "66866f622a2296a8d9099639",
+            "name": "UZI PRO 9x19mm R-32",
+            "rarity": "2",
+            "magLoadPercent": -40
+        },
+        {
+            "id": "66992725ae08c5c29e0c4f9a",
+            "name": "UZI 9x19mm R-40",
+            "rarity": "3",
+            "magLoadPercent": -50
+        },
+        {
+            "id": "6699272a3c4fda6471005cc1",
+            "name": "UZI 9x19mm R-50",
+            "rarity": "4",
+            "magLoadPercent": -60
         },
         {
             "id": "5c0672ed0db834001b7353f3",
@@ -858,7 +1008,7 @@
             "id": "5a351711c4a282000b1521a4",
             "name": "X-5 MP5 9x19mm R-60",
             "rarity": "5",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         },
         {
             "id": "5a718b548dc32e000d46d262",
@@ -920,21 +1070,6 @@
         {
             "id": "62e153bcdb1a5c41971c1b5b",
             "name": "SR-2M 9x21mm R-30",
-            "rarity": "3",
-            "magLoadPercent": -50
-        },
-
-
-
-        {
-            "id": "57838f0b2459774a256959b2",
-            "name": "6L24 9x39mm R-10",
-            "rarity": "2",
-            "magLoadPercent": -45
-        },
-        {
-            "id": "57838f9f2459774a150289a0",
-            "name": "6L25 9x39mm R-20",
             "rarity": "3",
             "magLoadPercent": -50
         },
@@ -1083,10 +1218,22 @@
             "magLoadPercent": -45
         },
         {
+            "id": "66ffaab91f7492c901027bb8",
+            "name": "AA12 12ga R-8",
+            "rarity": "2",
+            "magLoadPercent": -40
+        },
+        {
             "id": "5cf8f3b0d7f00c00217872ef",
             "name": "POWERMAG 12ga R-20",
             "rarity": "5",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
+        },
+        {
+            "id": "6709133fa532466d5403fb7c",
+            "name": "AA12 12ga R-20",
+            "rarity": "5",
+            "magLoadPercent": -75
         },
 
 
@@ -1116,31 +1263,31 @@
             "id": "627bce33f21bc425b06ab967",
             "name": "MSGL 40mm R-6",
             "rarity": "1",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         },
         {
             "id": "619f54a1d25cbd424731fb99",
             "name": "CR CYL 9x33 R-6",
             "rarity": "1",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         },
         {
             "id": "624c3074dbbd335e8e6becf3",
             "name": "CR CYL 9x19 R-6",
             "rarity": "1",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         },
         {
             "id": "633ec6ee025b096d320a3b15",
             "name": "RSH12 CYL 12.7x55mm R-5",
             "rarity": "1",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         },
         {
             "id": "60dc519adf4c47305f6d410d",
             "name": "255 CYL 12GA R-5",
             "rarity": "1",
-            "magLoadPercent": -80
+            "magLoadPercent": -75
         }
     ]
 }

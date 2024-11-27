@@ -43,11 +43,11 @@
             "leg": 100
         },
         "pmcbot": {
-            "head": 280,
-            "chest": 800,
-            "stomach": 650,
-            "arm": 480,
-            "leg": 420
+            "head": 350,
+            "chest": 850,
+            "stomach": 700,
+            "arm": 600,
+            "leg": 650
         },
         "usec": {
             "head": 280,

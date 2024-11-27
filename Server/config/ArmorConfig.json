@@ -157,28 +157,54 @@
             "name": "LBT-6094A Slick Plate Carrier",
             "rarity": "5"
         },
+        {
+            "id": "64be79c487d1510151095552",
+            "name": "NPP Klass Kora-kulon B",
+            "rarity": "2"
+        },
+        {
+            "id": "64be79e2bf8412471d0d9bcc",
+            "name": "NPP Klass Kora-kulon DF",
+            "rarity": "2"
+        },
+        {
+            "id": "64abd93857958b4249003418",
+            "name": "Interceptor OTV",
+            "rarity": "2"
+        },
 
+
+        {
+            "id": "603409c80ca681766b6a0fb2",
+            "name": "NPP KlASS Condor glasses",
+            "rarity": "2"
+        },
+        {
+            "id": "62a61c988ec41a51b34758d5",
+            "name": "Oakley SI Batwolf glasses",
+            "rarity": "2"
+        },
 
 
         {
             "id": "5a16ba61fcdbcb098008728a",
             "name": "Ops-Core FAST Gunsight Mandible",
-            "rarity": "1"
+            "rarity": "2"
         },
         {
             "id": "5f60c076f2bcbb675b00dac2",
             "name": "Galvion Caiman Hybrid Ballistic Mandible Guard",
-            "rarity": "1"
+            "rarity": "2"
         },
         {
             "id": "5ea058e01dbce517f324b3e2",
             "name": "Tac-Kek Heavy Trooper mask for Ops-Core-type helmets",
-            "rarity": "1"
+            "rarity": "2"
         },
         {
             "id": "5c178a942e22164bef5ceca3",
             "name": "Crye Precision AirFrame Chops",
-            "rarity": "2"
+            "rarity": "3"
         },
         {
             "id": "5c1793902e221602b21d3de2",
@@ -230,6 +256,76 @@
             "name": "Maska-1SCh face shield (Olive Drab)",
             "rarity": "5"
         },
+        {
+            "id": "6570a88c8f221f3b210353b7",
+            "name": "Diamond Age Ballistic Mandible",
+            "rarity": "3"
+        },
+        {
+            "id": "65719f9ef392ad76c50a2ec8",
+            "name": "Tor-2 Face Shield",
+            "rarity": "3"
+        },
+        {
+            "id": "5a16b672fcdbcb001912fa83",
+            "name": "Ops-Core FAST Visor",
+            "rarity": "2"
+        },
+        {
+            "id": "5ac4c50d5acfc40019262e87",
+            "name": "Kolpak-1S face shield",
+            "rarity": "1"
+        },
+        {
+            "id": "5f60bf4558eff926626a60f2",
+            "name": "Galvion Caiman Fixed Arm Visor",
+            "rarity": "2"
+        },
+        {
+            "id": "5aa7e3abe5b5b000171d064d",
+            "name": "ZSh-1-2M face shield",
+            "rarity": "3"
+        },
+        {
+            "id": "5b46238386f7741a693bcf9c",
+            "name": "Kiver-M face shield",
+            "rarity": "3"
+        },
+        {
+            "id": "5a16b7e1fcdbcb00165aa6c9",
+            "name": "Ops-Core FAST multi-hit ballistic face shield",
+            "rarity": "3"
+        },
+        {
+            "id": "5e00cdd986f7747473332240",
+            "name": "Team Wendy EXFIL Ballistic face shield (Black)",
+            "rarity": "3"
+        },
+        {
+            "id": "5e01f37686f774773c6f6c15",
+            "name": "Team Wendy EXFIL Ballistic face shield (Coyote Brown)",
+            "rarity": "3"
+        },
+        {
+            "id": "5d6d3829a4b9361bc8618943",
+            "name": "LShZ-2DTM face shield",
+            "rarity": "4"
+        },
+        {
+            "id": "5ca2113f86f7740b2547e1d2",
+            "name": "Vulkan-5 face shield",
+            "rarity": "4"
+        },
+        {
+            "id": "5aa7e373e5b5b000137b76f0",
+            "name": "Altyn face shield",
+            "rarity": "5"
+        },
+        {
+            "id": "5f60c85b58eff926626a60f7",
+            "name": "Rys-T face shield",
+            "rarity": "5"
+        },
 
 
 
@@ -241,16 +337,21 @@
         {
             "id": "62a09e08de7ac81993580532",
             "name": "Glorious E lightweight armored mask",
-            "rarity": "1"
+            "rarity": "2"
         },
-
-
-
         {
             "id": "62963c18dbc8ab5f0d382d0b",
             "name": "Death Knight mask",
+            "rarity": "5"
+        },
+        {
+            "id": "657089638db3adca1009f4ca",
+            "name": "CQCM",
             "rarity": "6"
         },
+
+
+
         {
             "id": "5df8a58286f77412631087ed",
             "name": "TSh-4M-L soft tank crew helmet",
@@ -327,9 +428,34 @@
             "rarity": "2"
         },
         {
+            "id": "65719f0775149d62ce0a670b",
+            "name": "NPP Klass Tor-2",
+            "rarity": "2"
+        },
+        {
+            "id": "66b5f65ca7f72d197e70bcd6",
+            "name": "Ballistic Armor Co. B",
+            "rarity": "3"
+        },
+        {
+            "id": "66b5f666cad6f002ab7214c2",
+            "name": "Ballistic Armor Co. MC",
+            "rarity": "3"
+        },
+        {
+            "id": "66b5f661af44ca0014063c05",
+            "name": "Ballistic Armor Co. OD",
+            "rarity": "3"
+        },
+        {
+            "id": "65709d2d21b9f815e208ff95",
+            "name": "Diamond age NeoSteel high cut",
+            "rarity": "3"
+        },
+        {
             "id": "5e00c1ad86f774747333222c",
             "name": "Team Wendy EXFIL Ballistic Helmet (Black)",
-            "rarity": "3"
+            "rarity": "4"
         },
         {
             "id": "5b40e2bc5acfc40016388216",
@@ -359,7 +485,7 @@
         {
             "id": "5e01ef6886f77445f643baa4",
             "name": "Team Wendy EXFIL Ballistic Helmet (Coyote Brown)",
-            "rarity": "3"
+            "rarity": "4"
         },
         {
             "id": "5e4bfc1586f774264f7582d3",
@@ -374,17 +500,17 @@
         {
             "id": "5a154d5cfcdbcb001a3b00da",
             "name": "Ops-Core FAST MT Super High Cut helmet (Black)",
-            "rarity": "3"
+            "rarity": "4"
         },
         {
             "id": "5ea17ca01412a1425304d1c0",
             "name": "Diamond Age Bastion helmet",
-            "rarity": "3"
+            "rarity": "4"
         },
         {
             "id": "5c091a4e0db834001d5addc8",
             "name": "Maska-1SCh bulletproof helmet (Olive Drab)",
-            "rarity": "3"
+            "rarity": "4"
         },
         {
             "id": "5d5e7d28a4b936645d161203",
@@ -414,12 +540,12 @@
         {
             "id": "5ac8d6885acfc400180ae7b0",
             "name": "Ops-Core FAST MT Super High Cut helmet (Tan)",
-            "rarity": "3"
+            "rarity": "4"
         },
         {
             "id": "5c17a7ed2e2216152142459c",
             "name": "Crye Precision AirFrame helmet (Tan)",
-            "rarity": "3"
+            "rarity": "4"
         },
         {
             "id": "60a7ad2a2198820d95707a2e",
@@ -429,12 +555,12 @@
         {
             "id": "5aa7e276e5b5b000171d0647",
             "name": "Altyn bulletproof helmet",
-            "rarity": "4"
+            "rarity": "5"
         },
         {
             "id": "5f60c74e3b85f6263c145586",
             "name": "Rys-T bulletproof helmet",
-            "rarity": "4"
+            "rarity": "5"
         },
         {
             "id": "60a7ad3a0c5cb24b0134664a",
@@ -445,79 +571,6 @@
             "id": "5ca20ee186f774799474abc2",
             "name": "Vulkan-5 (LShZ-5) bulletproof helmet",
             "rarity": "5"
-        },
-
-
-
-        {
-            "id": "603409c80ca681766b6a0fb2",
-            "name": "NPP KlASS Condor glasses",
-            "rarity": "1"
-        },
-        {
-            "id": "62a61c988ec41a51b34758d5",
-            "name": "Oakley SI Batwolf glasses",
-            "rarity": "1"
-        },
-        {
-            "id": "5a16b672fcdbcb001912fa83",
-            "name": "Ops-Core FAST Visor",
-            "rarity": "1"
-        },
-        {
-            "id": "5ac4c50d5acfc40019262e87",
-            "name": "Kolpak-1S face shield",
-            "rarity": "1"
-        },
-        {
-            "id": "5f60bf4558eff926626a60f2",
-            "name": "Galvion Caiman Fixed Arm Visor",
-            "rarity": "1"
-        },
-        {
-            "id": "5aa7e3abe5b5b000171d064d",
-            "name": "ZSh-1-2M face shield",
-            "rarity": "2"
-        },
-        {
-            "id": "5b46238386f7741a693bcf9c",
-            "name": "Kiver-M face shield",
-            "rarity": "2"
-        },
-        {
-            "id": "5a16b7e1fcdbcb00165aa6c9",
-            "name": "Ops-Core FAST multi-hit ballistic face shield",
-            "rarity": "2"
-        },
-        {
-            "id": "5e00cdd986f7747473332240",
-            "name": "Team Wendy EXFIL Ballistic face shield (Black)",
-            "rarity": "2"
-        },
-        {
-            "id": "5e01f37686f774773c6f6c15",
-            "name": "Team Wendy EXFIL Ballistic face shield (Coyote Brown)",
-            "rarity": "2"
-        },
-        {
-            "id": "5d6d3829a4b9361bc8618943",
-            "name": "LShZ-2DTM face shield",
-            "rarity": "3"
-        },
-        {
-            "id": "5ca2113f86f7740b2547e1d2",
-            "name": "Vulkan-5 face shield",
-            "rarity": "3"
-        },
-        {
-            "id": "5aa7e373e5b5b000137b76f0",
-            "name": "Altyn face shield",
-            "rarity": "4"
-        },
-        {
-            "id": "5f60c85b58eff926626a60f7",
-            "name": "Rys-T face shield",
-            "rarity": "4"
         },
 
 
@@ -535,6 +588,11 @@
         {
             "id": "5d5d8ca986f7742798716522",
             "name": "SOE Micro Rig",
+            "rarity": "1"
+        },
+        {
+            "id": "64be7095047e826eae02b0c1",
+            "name": "Zulu Nylon Rig",
             "rarity": "1"
         },
         {
@@ -656,6 +714,16 @@
             "rarity": "2"
         },
         {
+            "id": "64a5366719bab53bd203bf33",
+            "name": "EAI MBSS",
+            "rarity": "2"
+        },
+        {
+            "id": "64a536392d2c4e6e970f4121",
+            "name": "TV-115",
+            "rarity": "2"
+        },
+        {
             "id": "5d5d87f786f77427997cfaef",
             "name": "Ars Arma A18 Skanda plate carrier",
             "rarity": "3"
@@ -691,6 +759,11 @@
             "rarity": "3"
         },
         {
+            "id": "66b6296d7994640992013b17",
+            "name": "Stich Profi V2 Black",
+            "rarity": "3"
+        },
+        {
             "id": "639343fce101f4caa40a4ef3",
             "name": "Shellback Tactical Banshee plate carrier (A-Tacs AU)",
             "rarity": "3"
@@ -711,6 +784,11 @@
             "rarity": "4"
         },
         {
+            "id": "66b6295a8ca68c6461709efa",
+            "name": "Tasmanian Tiger MKIII",
+            "rarity": "4"
+        },
+        {
             "id": "628b9c7d45122232a872358f",
             "name": "Crye Precision CPC plate carrier (Goons Edition)",
             "rarity": "6"
@@ -728,6 +806,11 @@
         {
             "id": "628cd624459354321c4b7fa2",
             "name": "Tasmanian Tiger SK plate carrier (Multicam Black)",
+            "rarity": "5"
+        },
+        {
+            "id": "66b6295178bbc0200425f995",
+            "name": "Stich Profi Stich Defence mod 2",
             "rarity": "5"
         },
         {
@@ -771,6 +854,11 @@
         {
             "id": "544a5cde4bdc2d39388b456b",
             "name": "Flyye MBSS backpack",
+            "rarity": "1"
+        },
+        {
+            "id": "66b5f247af44ca0014063c02",
+            "name": "Vertx Ready Pack",
             "rarity": "1"
         },
         {
@@ -829,6 +917,16 @@
             "rarity": "3"
         },
         {
+            "id": "656f198fb27298d6fd005466",
+            "name": "Dragon egg",
+            "rarity": "3"
+        },
+        {
+            "id": "656ddcf0f02d7bcea90bf395",
+            "name": "Tehinkom RK-PT-25",
+            "rarity": "3"
+        },
+        {
             "id": "5f5e467b0bc58666c37e7821",
             "name": "Eberlestock F5 Switchblade backpack (Dry Earth)",
             "rarity": "4"
@@ -849,6 +947,11 @@
             "rarity": "4"
         },
         {
+            "id": "66b5f22b78bbc0200425f904",
+            "name": "Camelbak Tri-Zip assault backpack MC",
+            "rarity": "4"
+        },
+        {
             "id": "62a1b7fbc30cfa1d366af586",
             "name": "Gruppa 99 T30 backpack (Multicam)",
             "rarity": "4"
@@ -866,6 +969,11 @@
         {
             "id": "6034d2d697633951dc245ea6",
             "name": "Eberlestock G2 Gunslinger II backpack (Dry Earth)",
+            "rarity": "5"
+        },
+        {
+            "id": "656e0436d44a1bb4220303a0",
+            "name": "Mystery Ranch SATL",
             "rarity": "5"
         },
         {

@@ -1,19 +1,6 @@
 {
     "enabled": true,
 
-    "propital": {
-        "rarity": "3",
-        "healingRate": 20,
-        "healingTime": 120,
-        "skillTime": 1200,
-        "skillRate": 5
-    },
-    "etgc": {
-        "rarity": "5",
-        "healingRate": 200,
-        "healingTime": 30
-    },
-
     "items": [
         {
             "id": "5755356824597772cb798962",

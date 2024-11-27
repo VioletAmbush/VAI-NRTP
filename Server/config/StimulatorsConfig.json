@@ -596,6 +596,31 @@
             ]
         },
         {
+            "id": "66507eabf5ddb0818b085b68",
+            "name": "2A2-(b-TG)",
+            "rarity": "3",
+            "removeGoldenStarContusion": true,
+            "buffs": [
+                {
+                    "buffType": "HealthRate",
+                    "duration": 1200,
+                    "value": -20
+                },
+                {
+                    "buffType": "WeightLimit",
+                    "duration": 1200,
+                    "absoluteValue": false,
+                    "value": 0.7
+                },
+                {
+                    "buffType": "DamageModifier",
+                    "duration": 1200,
+                    "absoluteValue": false,
+                    "value": 0.1
+                }
+            ]
+        },
+        {
             "id": "5ed51652f6c34d2cc26336a1",
             "name": "MULE",
             "rarity": "4",

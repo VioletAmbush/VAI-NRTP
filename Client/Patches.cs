@@ -25,7 +25,7 @@ namespace TarkovRPG
         private static bool CreateShot(
             BallisticsCalculator __instance,
             ref EftBulletClass __result,
-            BulletClass __0,
+			AmmoItemClass __0,
             UnityEngine.Vector3 __1,
             UnityEngine.Vector3 __2,
             int __3,
@@ -138,7 +138,7 @@ namespace TarkovRPG
         public static bool ProceedDamageThroughArmor(
             Player? __instance,
             ref List<ArmorComponent>? __result,
-            ref DamageInfo __0,
+            ref DamageInfoStruct __0,
 			EBodyPartColliderType __1,
 			EArmorPlateCollider __2,
             bool __3)
@@ -155,7 +155,7 @@ namespace TarkovRPG
             List<ArmorComponent> armorComponentList = new List<ArmorComponent>();
 
             var armorClass = 0;
-            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass2773.InvincibleBalaclava);
+            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass3107.InvincibleBalaclava);
 
             foreach (ArmorComponent allocatedArmorComponent in _preAllocArmorComps)
             {
@@ -250,11 +250,11 @@ namespace TarkovRPG
         private static void ApplyShot(
             Player __instance,
 			ShotInfoClass? __result,
-            DamageInfo __0,
+            DamageInfoStruct __0,
             EBodyPart __1,
 			EBodyPartColliderType __2,
 			EArmorPlateCollider __3,
-			GStruct389 __4)
+			ShotIdStruct __4)
         {
             if (!ConfigRepository[Section.ArmorSettings])
                 return;
@@ -298,7 +298,7 @@ namespace TarkovRPG
 #endif
         }
 
-        [HarmonyPatch(typeof(GClass1216), "ToColor")]
+        [HarmonyPatch(typeof(GClass1320), "ToColor")]
         [HarmonyPostfix]
         private static void ToColor(
             ref UnityEngine.Color __result,

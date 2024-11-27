@@ -59,8 +59,8 @@ export class GlobalsManager extends AbstractModManager
                 this.locationConfig.looseLootMultiplier[loc] &&
                 !this.ignoredLocations.includes(loc))
             {
-                this.locationConfig.staticLootMultiplier[loc] = this.config.staticLootMultiplier
-                this.locationConfig.looseLootMultiplier[loc] = this.config.looseLootMultiplier
+                this.locationConfig.staticLootMultiplier[loc] *= this.config.staticLootMultiplier
+                this.locationConfig.looseLootMultiplier[loc] *= this.config.looseLootMultiplier
             }
         }
     }
@@ -117,6 +117,7 @@ export class GlobalsManager extends AbstractModManager
                 for (let exitKey in loc.allExtracts)
                 {
                     loc.allExtracts[exitKey].Chance = 100
+                    loc.allExtracts[exitKey].ChancePVE = 100
                 }
             }
         }
@@ -137,6 +138,8 @@ export class GlobalsManager extends AbstractModManager
         this.setAllExitsAvailable(locations.shoreline.base, "Village,Riverside")
         this.setAllExitsAvailable(locations.tarkovstreets.base, "E1_2,E2_3,E3_4,E4_5,E5_6,E6_1")
         this.setAllExitsAvailable(locations.woods.base, "House,Old Station")
+        this.setAllExitsAvailable(locations.sandbox.base, "west,east")
+        this.setAllExitsAvailable(locations.sandbox_high.base, "west,east")
     }
 
     private setAllExitsAvailable(location: ILocationBase, entryPoints: string): void

@@ -29,6 +29,11 @@
             "name": "AP .300",
             "rarity": "5"
         },
+        {
+            "id": "64b8725c4b75259c590fa899",
+            "name": "CBJ .300",
+            "rarity": "5"
+        },
 
 
 
@@ -61,6 +66,21 @@
             "id": "5e023d48186a883be655e551",
             "name": "BS 7.62x54mmR",
             "rarity": "5"
+        },
+        {
+            "id": "64b8f7968532cf95ee0a0dbf",
+            "name": "FMJ 7.62x54mmR",
+            "rarity": "2"
+        },
+        {
+            "id": "64b8f7b5389d7ffd620ccba2",
+            "name": "SP BT 7.62x54mmR",
+            "rarity": "3"
+        },
+        {
+            "id": "64b8f7c241772715af0f9c3d",
+            "name": "HP BT 7.62x54mmR",
+            "rarity": "4"
         },
 
 
@@ -133,6 +153,21 @@
             "id": "601aa3d2b2bcb34913271e6d",
             "name": "MAI AP 7.62x39mm",
             "rarity": "5"
+        },
+        {
+            "id": "64b7af5a8532cf95ee0a0dbd",
+            "name": "FMJ 7.62x39mm",
+            "rarity": "1"
+        },
+        {
+            "id": "64b7af434b75259c590fa893",
+            "name": "PP 7.62x39mm",
+            "rarity": "3"
+        },
+        {
+            "id": "64b7af734b75259c590fa895",
+            "name": "SP 7.62x39mm",
+            "rarity": "3"
         },
 
 
@@ -359,9 +394,19 @@
             "name": "AP SX 4.6x30mm",
             "rarity": "5"
         },
+        {
+            "id": "64b6979341772715af0f9c39",
+            "name": "JSP SX 4.6x30mm",
+            "rarity": "3"
+        },
 
 
 
+        {
+            "id": "6576f96220d53a5b8f3e395e",
+            "name": "FMJ 9x39mm",
+            "rarity": "3"
+        },
         {
             "id": "57a0dfb82459774d3078b56c",
             "name": "SP-5 9x39mm",
@@ -392,22 +437,32 @@
 
         {
             "id": "5a26abfac4a28232980eabff",
-            "name": "P 9x19mm",
-            "rarity": "3"
+            "name": "P 9x21mm",
+            "rarity": "2"
         },
         {
             "id": "5a26ac06c4a282000c5a90a8",
-            "name": "PE 9x19mm",
-            "rarity": "4"
+            "name": "PE 9x21mm",
+            "rarity": "3"
         },
         {
             "id": "5a269f97c4a282000b151807",
-            "name": "PS 9x19mm",
-            "rarity": "4"
+            "name": "PS 9x21mm",
+            "rarity": "2"
         },
         {
             "id": "5a26ac0ec4a28200741e1e18",
-            "name": "BT 9x19mm",
+            "name": "BT 9x21mm",
+            "rarity": "4"
+        },
+        {
+            "id": "6576f93989f0062e741ba952",
+            "name": "7U4 9x21mm",
+            "rarity": "3"
+        },
+        {
+            "id": "6576f4708ca9c4381d16cd9d",
+            "name": "7N42 9x21mm",
             "rarity": "5"
         },
 
@@ -453,6 +508,11 @@
             "name": "PBP 9x19mm",
             "rarity": "5"
         },
+        {
+            "id": "64b7bbb74b75259c590fa897",
+            "name": "FMJ M882 9x19mm",
+            "rarity": "2"
+        },
 
 
 
@@ -494,11 +554,6 @@
         {
             "id": "5737201124597760fc4431f1",
             "name": "PST 9x18mm",
-            "rarity": "3"
-        },
-        {
-            "id": "63b35f281745dd52341e5da7",
-            "name": "F1 SHRAPNEL 9x18mm",
             "rarity": "3"
         },
         {
@@ -612,6 +667,11 @@
         {
             "id": "5d6e68a8a4b9360b6c0d54e2",
             "name": "AP-20 12ga",
+            "rarity": "5"
+        },
+        {
+            "id": "64b8ee384b75259c590fa89b",
+            "name": "Piranha 12ga",
             "rarity": "5"
         },
 
@@ -847,17 +907,17 @@
         {
             "id": "5ede475b549eed7c6d5c18fb",
             "name": "M386 40x46mm",
-            "rarity": "6"
+            "rarity": "5"
         },
         {
             "id": "5ede4739e0350d05467f73e8",
             "name": "M406 40x46mm",
-            "rarity": "6"
+            "rarity": "5"
         },
         {
             "id": "5f0c892565703e5c461894e9",
             "name": "M433 40x46mm",
-            "rarity": "6"
+            "rarity": "5"
         },
         {
             "id": "5ede47405b097655935d7d16",
@@ -866,8 +926,14 @@
         },
         {
             "id": "5ede475339ee016e8c534742",
-            "name": "M576 40x46mm",
-            "rarity": "6"
+            "name": "M576 MP-APERS 40x46mm",
+            "rarity": "4"
+        },
+
+        {
+            "id": "5656eb674bdc2d35148b457c",
+            "name": "VOG-25",
+            "rarity": "5"
         }
     ]
 }
