@@ -1,5 +1,4 @@
 ﻿using EFT.Ballistics;
-using EFT.InventoryLogic;
 using EFT;
 using HarmonyLib;
 using System;
@@ -11,6 +10,7 @@ using System.Text;
 using JsonType;
 using UnityEngine;
 using EFT.HealthSystem;
+using EFT.InventoryLogic;
 
 namespace TarkovRPG
 {
@@ -155,7 +155,7 @@ namespace TarkovRPG
             List<ArmorComponent> armorComponentList = new List<ArmorComponent>();
 
             var armorClass = 0;
-            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass3107.InvincibleBalaclava);
+            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass3178.InvincibleBalaclava);
 
             foreach (ArmorComponent allocatedArmorComponent in _preAllocArmorComps)
             {
@@ -298,7 +298,7 @@ namespace TarkovRPG
 #endif
         }
 
-        [HarmonyPatch(typeof(GClass1320), "ToColor")]
+        [HarmonyPatch(typeof(GClass1338), "ToColor")]
         [HarmonyPostfix]
         private static void ToColor(
             ref UnityEngine.Color __result,

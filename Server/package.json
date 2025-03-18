@@ -1,7 +1,7 @@
 {
     "name": "NRTP",
-    "version": "1.0.7",
-    "sptVersion": "~3.10",
+    "version": "1.0.8",
+    "sptVersion": "~3.11",
     "license": "CC BY-NC-SA 3.0",
     "author": "VioletAmbush, Incurso",
     "loadBefore": [],

@@ -7,8 +7,10 @@
     "allExitsAvailable": true,
     "exitsAlwaysAvailable": true,
     "removeRunThroughs": true,
+    "allBossesAlwaysAvailable": false,
 
     "staticLootMultiplier": 2,
     "looseLootMultiplier": 2,
+    "botLootMultiplier": 2,
     "raidTimeMultiplier": 20
 }

@@ -41,6 +41,7 @@ export class GlobalsManager extends AbstractModManager
         this.trySetConstructionTime()
         this.trySetExitsAlwaysAvailable()
         this.trySetAllExitsAvailable()
+        this.trySetAllBossesAlwaysAvailable()
         this.tryRemoveRunThroughs()
     }
 
@@ -61,6 +62,21 @@ export class GlobalsManager extends AbstractModManager
             {
                 this.locationConfig.staticLootMultiplier[loc] *= this.config.staticLootMultiplier
                 this.locationConfig.looseLootMultiplier[loc] *= this.config.looseLootMultiplier
+            }
+        }
+
+        for (let botKey in this.databaseTables.bots.types)
+        {
+            let bot = this.databaseTables.bots.types[botKey]
+
+            for (let itemKey in bot.inventory.items)
+            {
+                const inv = bot.inventory.items[itemKey]
+
+                for (let invKey in inv)
+                {
+                    inv[invKey] *= this.config.botLootMultiplier
+                }
             }
         }
     }
@@ -140,6 +156,30 @@ export class GlobalsManager extends AbstractModManager
         this.setAllExitsAvailable(locations.woods.base, "House,Old Station")
         this.setAllExitsAvailable(locations.sandbox.base, "west,east")
         this.setAllExitsAvailable(locations.sandbox_high.base, "west,east")
+    }
+
+    private trySetAllBossesAlwaysAvailable(): void
+    {
+        if (this.config.allBossesAlwaysAvailable != true)
+        {
+            return
+        }
+
+        for (let locKey in this.databaseTables.locations)
+        {
+            const loc: ILocation = this.databaseTables.locations[locKey]
+
+            if (loc.base &&
+                loc.base.BossLocationSpawn &&
+                loc.base.BossLocationSpawn.length > 0)
+            {
+                loc.base.BossLocationSpawn.forEach(bls => 
+                { 
+                    bls.BossChance = 100
+                    bls.ForceSpawn = true 
+                })
+            }
+        }
     }
 
     private setAllExitsAvailable(location: ILocationBase, entryPoints: string): void
