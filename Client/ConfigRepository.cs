@@ -88,7 +88,7 @@ namespace TarkovRPG
             BindConfig(Section.ColorSettings, true, "Item background color changes enabled (Restart may be required)");
         }
 
-        public void UpdateValue(object sender, SettingChangedEventArgs args)
+        public void UpdateValue(SettingChangedEventArgs args)
         {
             if (args == null)
                 return;

@@ -1,6 +1,8 @@
-﻿using BepInEx;
+using BepInEx;
+using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
+using System;
 
 namespace TarkovRPG
 {
@@ -11,6 +13,7 @@ namespace TarkovRPG
         public ConfigRepository? ConfigRepository { get; set; }
 
         public static Plugin? Instance { get; set; }
+        private EventHandler<SettingChangedEventArgs>? _configSettingChangedHandler;
 
         public new ManualLogSource Logger => base.Logger;
 
@@ -21,23 +24,40 @@ namespace TarkovRPG
 
             Harmony.CreateAndPatchAll(typeof(Patches));
 
-			Logger.LogInfo($"[{PluginInfo.PLUGIN_NAME}] loaded!");
-		}
+            Logger.LogInfo($"[{PluginInfo.PLUGIN_NAME}] loaded!");
+        }
 
         private void OnEnable()
         {
-            Config.SettingChanged += ConfigRepository!.UpdateValue;
+            if (ConfigRepository is null)
+            {
+                return;
+            }
+
+            _configSettingChangedHandler ??= (_, args) => ConfigRepository.UpdateValue(args);
+            Config.SettingChanged += _configSettingChangedHandler;
         }
 
         private void OnDisable()
         {
-            Config.SettingChanged -= ConfigRepository!.UpdateValue;
+            if (_configSettingChangedHandler is null)
+            {
+                return;
+            }
+
+            Config.SettingChanged -= _configSettingChangedHandler;
         }
 
         private void OnDestroy()
         {
             Instance = null;
-            Config.SettingChanged -= ConfigRepository!.UpdateValue;
+
+            if (_configSettingChangedHandler is not null)
+            {
+                Config.SettingChanged -= _configSettingChangedHandler;
+            }
+
+            _configSettingChangedHandler = null;
             ConfigRepository = null;
         }
     }

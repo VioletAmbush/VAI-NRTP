@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using static TarkovRPG.ConfigRepository;
-using BepInEx.Logging;
 using System.Text;
 using JsonType;
 using UnityEngine;
@@ -16,16 +15,18 @@ namespace TarkovRPG
 {
     public static class Patches
     {
-        private static Plugin Instance => Plugin.Instance!;
-        private static ManualLogSource Logger => Plugin.Instance!.Logger;
-        private static ConfigRepository ConfigRepository => Plugin.Instance!.ConfigRepository!;
+        private static readonly AccessTools.FieldRef<Player, List<ArmorComponent>> PreAllocatedArmorComponentsRef =
+            AccessTools.FieldRefAccess<Player, List<ArmorComponent>>("_preAllocatedArmorComponents");
+
+        private static readonly AccessTools.FieldRef<Player, IHealthController> HealthControllerRef =
+            AccessTools.FieldRefAccess<Player, IHealthController>("_healthController");
 
         [HarmonyPatch(typeof(BallisticsCalculator), "CreateShot")]
         [HarmonyPrefix]
         private static bool CreateShot(
             BallisticsCalculator __instance,
             ref EftBulletClass __result,
-			AmmoItemClass __0,
+            AmmoItemClass __0,
             UnityEngine.Vector3 __1,
             UnityEngine.Vector3 __2,
             int __3,
@@ -33,29 +34,36 @@ namespace TarkovRPG
             Item __5,
             float __6 = 1f,
             int __7 = 0)
-		{
-			if (!ConfigRepository[Section.DamageSettings] || Plugin.Instance == null || !(__5 is Weapon weapon))
+        {
+            var plugin = Plugin.Instance;
+            if (plugin is null)
+            {
+                return true;
+            }
+
+            var configRepository = plugin.ConfigRepository;
+            if (configRepository is null || !configRepository[Section.DamageSettings] || __5 is not Weapon weapon)
             {
                 return true;
             }
 
             float damage = __0.Damage;
-            float damageMult = ConfigRepository[DamageStatKey.Default];
+            float damageMult = configRepository[DamageStatKey.Default];
 
             if (weapon.BoltAction &&
                 weapon.WeapClass.Equals("sniperRifle"))
             {
-                damageMult = ConfigRepository[DamageStatKey.BoltAction];
+                damageMult = configRepository[DamageStatKey.BoltAction];
             }
             else if (
                 weapon.Template._id == "59f9cabd86f7743a10721f46" ||
                 weapon.Template._id == "60339954d62c9b14ed777c06")
             {
-                damageMult = ConfigRepository[DamageStatKey.SingleSMGs];
+                damageMult = configRepository[DamageStatKey.SingleSMGs];
             }
             else if (weapon.Template._id == "61f7c9e189e6fb1a5e3ea78d") // Break-action single-fire rifle
             {
-                damageMult = ConfigRepository[DamageStatKey.BoltAction];
+                damageMult = configRepository[DamageStatKey.BoltAction];
             }
             // TODO: Refine
             else if ((!weapon.BoltAction &&
@@ -75,21 +83,21 @@ namespace TarkovRPG
 
                 weapon.Template._id == "59e6687d86f77411d949b251") // One of VPOs is a shotgun for some reason
             {
-                damageMult = ConfigRepository[DamageStatKey.Marksman];
+                damageMult = configRepository[DamageStatKey.Marksman];
             }
             else if (weapon.WeapClass.Equals("shotgun"))
             {
-                damageMult = ConfigRepository[DamageStatKey.Shotgun];
+                damageMult = configRepository[DamageStatKey.Shotgun];
             }
             else if (weapon.WeapClass.Equals("pistol"))
             {
                 if (weapon.WeapFireType.Contains(Weapon.EFireMode.doubleaction))
                 {
-                    damageMult = ConfigRepository[DamageStatKey.Revolver];
+                    damageMult = configRepository[DamageStatKey.Revolver];
                 }
                 else
                 {
-                    damageMult = ConfigRepository[DamageStatKey.Pistol];
+                    damageMult = configRepository[DamageStatKey.Pistol];
                 }
             }
 
@@ -125,10 +133,11 @@ namespace TarkovRPG
                 __4,
                 __5,
                 __3,
-                null);
+                null,
+                false);
 
 #if DEBUG
-            Logger.LogInfo($"{weapon.Template.Name} {weapon.WeapClass} Bang! Damage (x{damageMult:F1}): {damage:F0}");
+            plugin.Logger.LogInfo($"{weapon.Template.Name} {weapon.WeapClass} Bang! Damage (x{damageMult:F1}): {damage:F0}");
 #endif
 			return false;
         }
@@ -143,19 +152,26 @@ namespace TarkovRPG
 			EArmorPlateCollider __2,
             bool __3)
         {
-            if (!ConfigRepository[Section.ArmorSettings] || Instance == null || __instance == null)
+            var plugin = Plugin.Instance;
+            if (plugin is null)
+            {
+                return true;
+            }
+
+            var configRepository = plugin.ConfigRepository;
+            if (configRepository is null || !configRepository[Section.ArmorSettings] || __instance == null)
                 return true;
 
             var damageInfoIsLocal = __3;
 
-            var _preAllocArmorComps = __instance.GetPrivateFieldValue<List<ArmorComponent>>("_preAllocatedArmorComponents");
+            var _preAllocArmorComps = PreAllocatedArmorComponentsRef(__instance);
             _preAllocArmorComps.Clear();
             __instance.Inventory.GetPutOnArmorsNonAlloc(_preAllocArmorComps);
 
             List<ArmorComponent> armorComponentList = new List<ArmorComponent>();
 
             var armorClass = 0;
-            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass3178.InvincibleBalaclava);
+            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass3382.InvincibleBalaclava);
 
             foreach (ArmorComponent allocatedArmorComponent in _preAllocArmorComps)
             {
@@ -167,7 +183,7 @@ namespace TarkovRPG
 
                     armorComponentList.Add(allocatedArmorComponent);
 
-                    if (__instance.GetPrivateFieldValue<IHealthController>("_healthController").IsAlive)
+                    if (HealthControllerRef(__instance).IsAlive)
                     {
                         var damage = __0.Damage;
                         armorDamage = allocatedArmorComponent.ApplyDamage(
@@ -212,14 +228,14 @@ namespace TarkovRPG
                     __0.DamageType == EDamageType.GrenadeFragment ||
                     __0.DamageType == EDamageType.Sniper)
                 {
-                    var damageMultiplier = ConfigRepository[FromClassToEnum(armorClass)];
+                    var damageMultiplier = configRepository[FromClassToEnum(armorClass)];
                     damageMultiplier += (__0.PenetrationPower / 100f);
                     damageMultiplier = Math.Min(1f, damageMultiplier);
                     damageMultiplier = damageMultiplier < 0f ? 0f : damageMultiplier;
 
 #if DEBUG
                     if (armorClass != 0)
-                        Logger.LogInfo($"Armor hit! Class {armorClass} Pen:{__0.PenetrationPower:F1} Mult:x{damageMultiplier:F2} Dam:{__0.Damage:F0}->{__0.Damage * damageMultiplier:F0}");
+                        plugin.Logger.LogInfo($"Armor hit! Class {armorClass} Pen:{__0.PenetrationPower:F1} Mult:x{damageMultiplier:F2} Dam:{__0.Damage:F0}->{__0.Damage * damageMultiplier:F0}");
 #endif
 
                     __0.Damage *= damageMultiplier;
@@ -256,7 +272,9 @@ namespace TarkovRPG
 			EArmorPlateCollider __3,
 			ShotIdStruct __4)
         {
-            if (!ConfigRepository[Section.ArmorSettings])
+            var plugin = Plugin.Instance;
+            var configRepository = plugin?.ConfigRepository;
+            if (configRepository is null || !configRepository[Section.ArmorSettings])
                 return;
 
             var damageInfo = __0;
@@ -267,7 +285,7 @@ namespace TarkovRPG
 
             var bodyPart = __instance.HealthController.GetBodyPartHealth(bodyPartType);
 
-            var massDamage = damageInfo.Damage * ConfigRepository[DamageStatKey.Mass];
+            var massDamage = damageInfo.Damage * configRepository[DamageStatKey.Mass];
 
 #if DEBUG
             var stringBuilder = new StringBuilder();
@@ -294,17 +312,21 @@ namespace TarkovRPG
             }
 
 #if DEBUG
-            Logger.LogInfo(stringBuilder.ToString());
+            if (plugin != null)
+            {
+                plugin.Logger.LogInfo(stringBuilder.ToString());
+            }
 #endif
         }
 
-        [HarmonyPatch(typeof(GClass1338), "ToColor")]
+        [HarmonyPatch(typeof(GClass1409), "ToColor")]
         [HarmonyPostfix]
         private static void ToColor(
             ref UnityEngine.Color __result,
             TaxonomyColor __0)
         {
-			if (!ConfigRepository[Section.ColorSettings])
+            var configRepository = Plugin.Instance?.ConfigRepository;
+			if (configRepository is null || !configRepository[Section.ColorSettings])
                 return; 
 
             if (__0 == TaxonomyColor.green)
