@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VAI-NRTP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0+6cdc468222b3192bbbd73e5e48dfbb9b2f480df2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0+a6d2ea07801307f91b54201e65b60ab506e3696f")]
 [assembly: System.Reflection.AssemblyProductAttribute("VAI-NRTP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VAI-NRTP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.1.0.0")]

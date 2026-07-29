@@ -1,5 +1,6 @@
 {
     "enabled": true,
+    "autoAddNewBots": true,
 
     "player": {
         "head": 350,

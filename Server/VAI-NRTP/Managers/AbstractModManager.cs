@@ -1,3 +1,4 @@
+using System.Text.Json;
 using System.Text.Json.Nodes;
 using SPTarkov.Server.Core.Models.Spt.Server;
 using SPTarkov.Server.Core.Utils;
@@ -57,6 +58,21 @@ public abstract class AbstractModManager
         AfterPostSpt();
     }
 
+    // Runs after every other mod's load hooks, for work that has to see the finished database.
+    public void FinalLoad()
+    {
+        EnsurePreSptInitialized();
+
+        if (!IsEnabled())
+        {
+            return;
+        }
+
+        EnsurePostDbInitialized();
+        EnsurePostSptInitialized();
+        AfterFinal();
+    }
+
     protected virtual void PreSptInitialize()
     {
         Config = LoadConfig(ConfigName);
@@ -84,6 +100,10 @@ public abstract class AbstractModManager
     }
 
     protected virtual void AfterPostSpt()
+    {
+    }
+
+    protected virtual void AfterFinal()
     {
     }
 
@@ -155,6 +175,33 @@ public abstract class AbstractModManager
 
         var json = File.ReadAllText(path);
         return JsonNode.Parse(json);
+    }
+
+    // Writes the in-memory config back over the file it was loaded from. A failure here must not
+    // break startup, it only means the work gets redone on the next load.
+    protected void SaveConfig()
+    {
+        if (Config is null)
+        {
+            return;
+        }
+
+        var path = Path.Combine(ModContext.Current.ConfigPath, $"{ConfigName}.json");
+
+        try
+        {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                IndentSize = 4
+            };
+
+            File.WriteAllText(path, Config.ToJsonString(options));
+        }
+        catch (Exception ex)
+        {
+            Constants.GetLogger().Warning($"{Constants.ModTitle}: Could not save {ConfigName}.json: {ex.Message}");
+        }
     }
 
     protected static double? GetNumberValue(JsonNode? node)

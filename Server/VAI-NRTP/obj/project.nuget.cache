@@ -1,17 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "2X0kSm68coE=",
+  "dgSpecHash": "4mvj25SUmIs=",
   "success": true,
-  "projectFilePath": "D:\\Projects\\VAI\\VAI-NRTP\\Server\\VAI-NRTP\\VAI-NRTP.csproj",
+  "projectFilePath": "c:\\Users\\awnov\\RiderProjects\\VAI-NRTP\\Server\\VAI-NRTP\\VAI-NRTP.csproj",
   "expectedPackageFiles": [
-    "C:\\Nugets\\fastcloner\\3.3.16\\fastcloner.3.3.16.nupkg.sha512",
-    "C:\\Nugets\\jetbrains.annotations\\2025.2.2\\jetbrains.annotations.2025.2.2.nupkg.sha512",
-    "C:\\Nugets\\microsoft.extensions.dependencyinjection.abstractions\\9.0.9\\microsoft.extensions.dependencyinjection.abstractions.9.0.9.nupkg.sha512",
-    "C:\\Nugets\\semanticversioning\\3.0.0\\semanticversioning.3.0.0.nupkg.sha512",
-    "C:\\Nugets\\sptarkov.common\\4.0.5\\sptarkov.common.4.0.5.nupkg.sha512",
-    "C:\\Nugets\\sptarkov.di\\4.0.5\\sptarkov.di.4.0.5.nupkg.sha512",
-    "C:\\Nugets\\sptarkov.server.core\\4.0.5\\sptarkov.server.core.4.0.5.nupkg.sha512",
-    "C:\\Nugets\\system.io.hashing\\9.0.9\\system.io.hashing.9.0.9.nupkg.sha512"
+    "C:\\Users\\awnov\\.nuget\\packages\\fastcloner\\3.3.16\\fastcloner.3.3.16.nupkg.sha512",
+    "C:\\Users\\awnov\\.nuget\\packages\\jetbrains.annotations\\2025.2.2\\jetbrains.annotations.2025.2.2.nupkg.sha512",
+    "C:\\Users\\awnov\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.9\\microsoft.extensions.dependencyinjection.abstractions.9.0.9.nupkg.sha512",
+    "C:\\Users\\awnov\\.nuget\\packages\\semanticversioning\\3.0.0\\semanticversioning.3.0.0.nupkg.sha512",
+    "C:\\Users\\awnov\\.nuget\\packages\\sptarkov.common\\4.0.5\\sptarkov.common.4.0.5.nupkg.sha512",
+    "C:\\Users\\awnov\\.nuget\\packages\\sptarkov.di\\4.0.5\\sptarkov.di.4.0.5.nupkg.sha512",
+    "C:\\Users\\awnov\\.nuget\\packages\\sptarkov.server.core\\4.0.5\\sptarkov.server.core.4.0.5.nupkg.sha512",
+    "C:\\Users\\awnov\\.nuget\\packages\\system.io.hashing\\9.0.9\\system.io.hashing.9.0.9.nupkg.sha512",
+    "C:\\Users\\awnov\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.14\\microsoft.netcore.app.ref.9.0.14.nupkg.sha512",
+    "C:\\Users\\awnov\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.14\\microsoft.windowsdesktop.app.ref.9.0.14.nupkg.sha512",
+    "C:\\Users\\awnov\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.14\\microsoft.aspnetcore.app.ref.9.0.14.nupkg.sha512"
   ],
   "logs": []
 }
