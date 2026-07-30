@@ -1,6 +1,8 @@
 ﻿Client/.vs
 Client/obj
 Client/bin
+Server/VAI-NRTP/bin
+Server/VAI-NRTP/obj
 Server/node_modules
 *.zip
 .properties
