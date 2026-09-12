@@ -1,14 +1,12 @@
 using System.Text.Json.Nodes;
 using SPTarkov.Server.Core.Models.Common;
-using SPTarkov.Server.Core.Models.Eft.Common;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
-using SPTarkov.Server.Core.Models.Spt.Server;
 
 namespace VAI.NRTP;
 
 public static class Helper
 {
-    public static void SetItemBuffs(DatabaseTables databaseTables, TemplateItem item, JsonNode? buffsConfig)
+    public static void SetItemBuffs(ModDatabaseTables databaseTables, TemplateItem item, JsonNode? buffsConfig)
     {
         if (buffsConfig is null)
         {
@@ -76,9 +74,9 @@ public static class Helper
     }
 
     public static void IterateConfigItems(
-        DatabaseTables databaseTables,
+        ModDatabaseTables databaseTables,
         JsonNode? config,
-        Action<TemplateItem, JsonObject, DatabaseTables, JsonNode?>? action = null,
+        Action<TemplateItem, JsonObject, ModDatabaseTables, JsonNode?>? action = null,
         bool trySetRarity = true)
     {
         if (config is not JsonObject obj)

@@ -1,11 +1,19 @@
 using System.Reflection;
+using SPTarkov.Common.Models.Logging;
 using SPTarkov.DI.Annotations;
-using SPTarkov.Server.Core.Helpers;
-using SPTarkov.Server.Core.Models.Utils;
-using SPTarkov.Server.Core.Servers;
+using SPTarkov.Server.Core.Helpers.Profile;
+using SPTarkov.Server.Core.Helpers.Server;
+using SPTarkov.Server.Core.Models.Spt.Tables;
 using SPTarkov.Server.Core.Utils;
 
 namespace VAI.NRTP;
+
+public sealed record ModDatabaseTables(
+    TemplateTable Templates,
+    GlobalTable Globals,
+    BotTable Bots,
+    HideoutTable Hideout,
+    LocationTable Locations);
 
 [Injectable(InjectionType.Singleton)]
 public sealed class ModContext
@@ -14,7 +22,7 @@ public sealed class ModContext
 
     public ModHelper ModHelper { get; }
     public ProfileHelper ProfileHelper { get; }
-    public DatabaseServer DatabaseServer { get; }
+    public ModDatabaseTables DatabaseTables { get; }
     public JsonUtil JsonUtil { get; }
     public HashUtil HashUtil { get; }
     public RandomUtil RandomUtil { get; }
@@ -25,7 +33,11 @@ public sealed class ModContext
 
     public ModContext(
         ModHelper modHelper,
-        DatabaseServer databaseServer,
+        TemplateTable templateTable,
+        GlobalTable globalTable,
+        BotTable botTable,
+        HideoutTable hideoutTable,
+        LocationTable locationTable,
         JsonUtil jsonUtil,
         HashUtil hashUtil,
         RandomUtil randomUtil,
@@ -34,7 +46,7 @@ public sealed class ModContext
     {
         ModHelper = modHelper;
         ProfileHelper = profileHelper;
-        DatabaseServer = databaseServer;
+        DatabaseTables = new ModDatabaseTables(templateTable, globalTable, botTable, hideoutTable, locationTable);
         JsonUtil = jsonUtil;
         HashUtil = hashUtil;
         RandomUtil = randomUtil;

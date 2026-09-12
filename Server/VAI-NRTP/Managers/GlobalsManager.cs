@@ -3,9 +3,8 @@ using SPTarkov.Server.Core.Models.Common;
 using SPTarkov.Server.Core.Models.Eft.Common;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
 using SPTarkov.Server.Core.Models.Spt.Config;
-using SPTarkov.Server.Core.Models.Spt.Server;
-using SPTarkov.Server.Core.Servers;
-using SptLocations = SPTarkov.Server.Core.Models.Spt.Server.Locations;
+using SPTarkov.Server.Core.Models.Spt.Tables;
+using SptLocations = SPTarkov.Server.Core.Models.Spt.Tables.LocationTable;
 
 namespace VAI.NRTP.Managers;
 
@@ -26,9 +25,9 @@ public sealed class GlobalsManager : AbstractModManager
 
     protected override string ConfigName => "GlobalsConfig";
 
-    public GlobalsManager(ConfigServer configServer)
+    public GlobalsManager(LocationConfig locationConfig)
     {
-        _locationConfig = configServer.GetConfig<LocationConfig>();
+        _locationConfig = locationConfig;
     }
 
     protected override void AfterPostDb()

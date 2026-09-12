@@ -1,6 +1,5 @@
 using System.Text.Json;
 using System.Text.Json.Nodes;
-using SPTarkov.Server.Core.Models.Spt.Server;
 using SPTarkov.Server.Core.Utils;
 
 namespace VAI.NRTP.Managers;
@@ -14,7 +13,7 @@ public abstract class AbstractModManager
     protected bool PostDbInitialized;
     protected bool PostSptInitialized;
 
-    protected DatabaseTables DatabaseTables = null!;
+    protected ModDatabaseTables DatabaseTables = null!;
     protected JsonUtil JsonUtil = null!;
 
     public virtual int Priority => 1;
@@ -82,7 +81,7 @@ public abstract class AbstractModManager
     protected virtual void PostDbInitialize()
     {
         JsonUtil = ModContext.Current.JsonUtil;
-        DatabaseTables = ModContext.Current.DatabaseServer.GetTables();
+        DatabaseTables = ModContext.Current.DatabaseTables;
         PostDbInitialized = true;
     }
 
