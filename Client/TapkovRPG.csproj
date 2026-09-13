@@ -5,6 +5,8 @@
     <RootNamespace>TapkovRPG</RootNamespace>
     <AssemblyName>VAI-NRTP</AssemblyName>
     <Description>VAI-NRTP</Description>
+    <BepInExPluginGuid>com.vai.nrtp</BepInExPluginGuid>
+    <BepInExPluginName>VAI-NRTP</BepInExPluginName>
     <Authors>VioletAmbush, Incurso</Authors>
     <Version>1.1.1</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
