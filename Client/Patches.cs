@@ -4,14 +4,14 @@ using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using static TarkovRPG.ConfigRepository;
+using static TapkovRPG.ConfigRepository;
 using System.Text;
 using JsonType;
 using UnityEngine;
 using EFT.HealthSystem;
 using EFT.InventoryLogic;
 
-namespace TarkovRPG
+namespace TapkovRPG
 {
     public static class Patches
     {
@@ -25,8 +25,8 @@ namespace TarkovRPG
         [HarmonyPrefix]
         private static bool CreateShot(
             BallisticsCalculator __instance,
-            ref EftBulletClass __result,
-            AmmoItemClass __0,
+            ref Shot __result,
+            Ammo __0,
             UnityEngine.Vector3 __1,
             UnityEngine.Vector3 __2,
             int __3,
@@ -109,7 +109,7 @@ namespace TarkovRPG
 
             damage *= damageMult;
 
-            __result = EftBulletClass.Create(
+            __result = Shot.Create(
                 __0,
                 __7,
                 num1,
@@ -147,7 +147,7 @@ namespace TarkovRPG
         public static bool ProceedDamageThroughArmor(
             Player? __instance,
             ref List<ArmorComponent>? __result,
-            ref DamageInfoStruct __0,
+            ref DamageInfo __0,
 			EBodyPartColliderType __1,
 			EArmorPlateCollider __2,
             bool __3)
@@ -171,7 +171,7 @@ namespace TarkovRPG
             List<ArmorComponent> armorComponentList = new List<ArmorComponent>();
 
             var armorClass = 0;
-            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == GClass3382.InvincibleBalaclava);
+            bool flag3 = _preAllocArmorComps.Any(comp => comp.Item.Template._id == ItemTemplateIds.InvincibleBalaclava);
 
             foreach (ArmorComponent allocatedArmorComponent in _preAllocArmorComps)
             {
@@ -265,12 +265,11 @@ namespace TarkovRPG
         [HarmonyPostfix]
         private static void ApplyShot(
             Player __instance,
-			ShotInfoClass? __result,
-            DamageInfoStruct __0,
+            DamageInfo __0,
             EBodyPart __1,
 			EBodyPartColliderType __2,
 			EArmorPlateCollider __3,
-			ShotIdStruct __4)
+			ShotId __4)
         {
             var plugin = Plugin.Instance;
             var configRepository = plugin?.ConfigRepository;
@@ -319,7 +318,7 @@ namespace TarkovRPG
 #endif
         }
 
-        [HarmonyPatch(typeof(GClass1409), "ToColor")]
+        [HarmonyPatch(typeof(TaxonomyColorExtension), "ToColor")]
         [HarmonyPostfix]
         private static void ToColor(
             ref UnityEngine.Color __result,

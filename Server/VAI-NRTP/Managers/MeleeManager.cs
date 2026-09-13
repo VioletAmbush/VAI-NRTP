@@ -1,7 +1,7 @@
 using System.Text.Json.Nodes;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
-using SPTarkov.Server.Core.Models.Spt.Server;
+using SPTarkov.Server.Core.Models.Spt.Tables;
 
 namespace VAI.NRTP.Managers;
 
@@ -17,7 +17,7 @@ public sealed class MeleeManager : AbstractModManager
         Constants.GetLogger().Info($"{Constants.ModTitle}: Melee changes applied!");
     }
 
-    private void SetMeleeItem(TemplateItem item, JsonObject config, DatabaseTables databaseTables, JsonNode? rootConfig)
+    private void SetMeleeItem(TemplateItem item, JsonObject config, ModContext databaseTables, JsonNode? rootConfig)
     {
         var slash = GetNumberValue(config["slashDamage"]);
         var stab = GetNumberValue(config["stabDamage"]);

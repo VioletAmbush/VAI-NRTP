@@ -2,9 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net471</TargetFramework>
+    <RootNamespace>TapkovRPG</RootNamespace>
     <AssemblyName>VAI-NRTP</AssemblyName>
     <Description>VAI-NRTP</Description>
-    <Version>1.1.0</Version>
+    <Authors>VioletAmbush, Incurso</Authors>
+    <Version>1.1.1</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>

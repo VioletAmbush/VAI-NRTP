@@ -4,7 +4,7 @@ using BepInEx.Logging;
 using HarmonyLib;
 using System;
 
-namespace TarkovRPG
+namespace TapkovRPG
 {
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
     [BepInProcess("EscapeFromTarkov.exe")]

@@ -1,6 +1,6 @@
-using static TarkovRPG.ConfigRepository;
+using static TapkovRPG.ConfigRepository;
 
-namespace TarkovRPG
+namespace TapkovRPG
 {
     internal static class Extensions
     {
