@@ -2,6 +2,7 @@ using System.Text.Json.Nodes;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
 using SPTarkov.Server.Core.Models.Enums;
+using SPTarkov.Server.Core.Models.Spt.Tables;
 
 namespace VAI.NRTP.Managers;
 
@@ -17,7 +18,7 @@ public sealed class FoodManager : AbstractModManager
         Constants.GetLogger().Info($"{Constants.ModTitle}: Food changes applied!");
     }
 
-    private void SetFood(TemplateItem item, JsonObject config, ModDatabaseTables databaseTables, JsonNode? rootConfig)
+    private void SetFood(TemplateItem item, JsonObject config, ModContext databaseTables, JsonNode? rootConfig)
     {
         if (config["buffs"] is JsonArray buffs && buffs.Count > 0)
         {

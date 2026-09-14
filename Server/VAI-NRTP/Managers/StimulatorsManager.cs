@@ -1,7 +1,9 @@
 using System.Text.Json.Nodes;
 using SPTarkov.DI.Annotations;
+using SPTarkov.Server.Core.Models.Eft.Common;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
 using SPTarkov.Server.Core.Models.Enums;
+using SPTarkov.Server.Core.Models.Spt.Tables;
 
 namespace VAI.NRTP.Managers;
 
@@ -17,7 +19,7 @@ public sealed class StimulatorsManager : AbstractModManager
         Constants.GetLogger().Info($"{Constants.ModTitle}: Stimulators changes applied!");
     }
 
-    private void SetStimulator(TemplateItem item, JsonObject config, ModDatabaseTables databaseTables, JsonNode? rootConfig)
+    private void SetStimulator(TemplateItem item, JsonObject config, ModContext databaseTables, JsonNode? rootConfig)
     {
         if (config["buffs"] is JsonArray buffs)
         {

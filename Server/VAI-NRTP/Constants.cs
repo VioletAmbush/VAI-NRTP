@@ -7,7 +7,7 @@ public static class Constants
 {
     public static string ModTitle = "VAI-NRTP";
 
-    public static ModDatabaseTables GetDatabaseTables() => ModContext.Current.DatabaseTables;
+    public static ModContext GetDatabaseTables() => ModContext.Current;
 
     public static JsonUtil GetJsonUtil() => ModContext.Current.JsonUtil;
 

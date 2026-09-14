@@ -4,7 +4,6 @@ using SPTarkov.Server.Core.Models.Eft.Common;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
 using SPTarkov.Server.Core.Models.Spt.Config;
 using SPTarkov.Server.Core.Models.Spt.Tables;
-using SptLocations = SPTarkov.Server.Core.Models.Spt.Tables.LocationTable;
 
 namespace VAI.NRTP.Managers;
 
@@ -324,7 +323,7 @@ public sealed class GlobalsManager : AbstractModManager
         }
     }
 
-    private static IEnumerable<(string Key, Location Location)> EnumerateLocations(SptLocations locations)
+    private static IEnumerable<(string Key, Location Location)> EnumerateLocations(LocationTable locations)
     {
         var mapped = locations.GetDictionary();
         if (mapped is null)

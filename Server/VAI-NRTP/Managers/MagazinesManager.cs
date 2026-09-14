@@ -1,6 +1,7 @@
 using System.Text.Json.Nodes;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
+using SPTarkov.Server.Core.Models.Spt.Tables;
 
 namespace VAI.NRTP.Managers;
 
@@ -76,7 +77,7 @@ public sealed class MagazinesManager : AbstractModManager
         props.LoadUnloadModifier = loadUnloadModifier;
     }
 
-    private void SetMag(TemplateItem item, JsonObject config, ModDatabaseTables databaseTables, JsonNode? rootConfig)
+    private void SetMag(TemplateItem item, JsonObject config, ModContext databaseTables, JsonNode? rootConfig)
     {
         var value = GetNumberValue(config["magLoadPercent"]);
         if (value is null)

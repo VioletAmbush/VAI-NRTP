@@ -1,6 +1,7 @@
 using System.Text.Json.Nodes;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.Models.Common;
+using SPTarkov.Server.Core.Models.Eft.Common;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
 using SPTarkov.Server.Core.Models.Enums;
 using SPTarkov.Server.Core.Models.Spt.Tables;
@@ -19,7 +20,7 @@ public sealed class HealingManager : AbstractModManager
         Constants.GetLogger().Info($"{Constants.ModTitle}: Healing items changes applied!");
     }
 
-    private void SetHealingItem(TemplateItem item, JsonObject itemConfig, ModDatabaseTables databaseTables, JsonNode? rootConfig)
+    private void SetHealingItem(TemplateItem item, JsonObject itemConfig, ModContext databaseTables, JsonNode? rootConfig)
     {
         var props = item.Properties;
         if (props is null)
@@ -90,7 +91,7 @@ public sealed class HealingManager : AbstractModManager
         effect.Cost = cost.Value;
     }
 
-    private static void SetRegenBuff(ModDatabaseTables databaseTables, string buffName, double rate, double time)
+    private static void SetRegenBuff(ModContext databaseTables, string buffName, double rate, double time)
     {
         var buffsTable = databaseTables.Globals?.Configuration?.Health?.Effects?.Stimulator?.Buffs;
         if (buffsTable is null)

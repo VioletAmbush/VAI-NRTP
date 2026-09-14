@@ -13,7 +13,7 @@ public abstract class AbstractModManager
     protected bool PostDbInitialized;
     protected bool PostSptInitialized;
 
-    protected ModDatabaseTables DatabaseTables = null!;
+    protected ModContext DatabaseTables = null!;
     protected JsonUtil JsonUtil = null!;
 
     public virtual int Priority => 1;
@@ -81,7 +81,7 @@ public abstract class AbstractModManager
     protected virtual void PostDbInitialize()
     {
         JsonUtil = ModContext.Current.JsonUtil;
-        DatabaseTables = ModContext.Current.DatabaseTables;
+        DatabaseTables = ModContext.Current;
         PostDbInitialized = true;
     }
 

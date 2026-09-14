@@ -1,4 +1,5 @@
 using System.Text.Json.Nodes;
+using SPTarkov.Server.Core.Models.Eft.Common;
 using SPTarkov.Server.Core.Models.Spt.Tables;
 
 namespace VAI.NRTP;
