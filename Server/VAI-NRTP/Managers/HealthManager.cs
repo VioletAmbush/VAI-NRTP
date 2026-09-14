@@ -12,10 +12,19 @@ public sealed class HealthManager : AbstractModManager
 
     protected override void AfterPostDb()
     {
-        SetBotsHealth();
         SetPlayerHealth();
 
-        Constants.GetLogger().Info($"{Constants.ModTitle}: Health changes applied!");
+        Constants.GetLogger().Info($"{Constants.ModTitle}: Player health changes applied!");
+    }
+
+    // Runs last so bot types other mods register after PostDb are in the database before any
+    // are seeded - MoreBotsAPI adds mod bot types at PostDBModLoader + 80085, well after our
+    // PostDb hook, so anything polling the bot list earlier never sees them.
+    protected override void AfterFinal()
+    {
+        SetBotsHealth();
+
+        Constants.GetLogger().Info($"{Constants.ModTitle}: Bot health changes applied!");
     }
 
     private void SetPlayerHealth()
@@ -63,48 +72,32 @@ public sealed class HealthManager : AbstractModManager
 
     private void SetBotsHealth()
     {
-        var botsConfig = GetConfigObject("bots");
-        var bossMultiplier = GetConfigNumber("bossMultiplier", 1);
-        var followerMultiplier = GetConfigNumber("followerMultiplier", 1);
-        var commonMultiplier = GetConfigNumber("commonMultiplier", 1);
-
         var botTypes = DatabaseTables.Bots?.Types;
         if (botTypes is null)
         {
             return;
         }
 
-        var configuredBots = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-
-        if (botsConfig != null)
+        var botsConfig = GetOrCreateBotsConfig();
+        if (botsConfig is null)
         {
-            foreach (var (botKey, botNode) in botsConfig)
-            {
-                if (botNode is not JsonObject botConfig)
-                {
-                    continue;
-                }
-
-                if (!TryGetBotType(botTypes, botKey, out var bot))
-                {
-                    continue;
-                }
-
-                var health = bot?.BotHealth;
-                if (health is null)
-                {
-                    continue;
-                }
-
-                SetTypeHealthConfig(health, botConfig);
-                configuredBots.Add(botKey);
-            }
+            return;
         }
 
-        foreach (var (botKey, bot) in botTypes)
+        // Give every bot the config does not know about an entry of its own, so the multipliers
+        // are only ever read once per bot type - the entry is what drives the values from here on.
+        var seededBots = SeedMissingBots(botsConfig, botTypes);
+
+        foreach (var (botKey, botNode) in botsConfig)
         {
-            if (string.IsNullOrWhiteSpace(botKey) || configuredBots.Contains(botKey))
+            if (botNode is not JsonObject botConfig)
             {
+                continue;
+            }
+
+            if (!TryGetBotType(botTypes, botKey, out var bot))
+            {
+                Constants.GetLogger().Warning($"{Constants.ModTitle}: No bot type named {botKey} in the database, skipping its health config.");
                 continue;
             }
 
@@ -114,19 +107,117 @@ public sealed class HealthManager : AbstractModManager
                 continue;
             }
 
-            if (botKey.Contains("boss", StringComparison.OrdinalIgnoreCase))
-            {
-                SetTypeHealthMult(health, bossMultiplier);
-            }
-            else if (botKey.Contains("follower", StringComparison.OrdinalIgnoreCase))
-            {
-                SetTypeHealthMult(health, followerMultiplier);
-            }
-            else
-            {
-                SetTypeHealthMult(health, commonMultiplier);
-            }
+            SetTypeHealthConfig(health, botConfig);
         }
+
+        if (seededBots.Count == 0)
+        {
+            return;
+        }
+
+        Constants.GetLogger().Info(
+            $"{Constants.ModTitle}: Added {seededBots.Count} new bot types to HealthConfig: {string.Join(", ", seededBots)}");
+
+        if (GetConfigBool("autoAddNewBots", true))
+        {
+            SaveConfig();
+        }
+    }
+
+    private JsonObject? GetOrCreateBotsConfig()
+    {
+        var botsConfig = GetConfigObject("bots");
+        if (botsConfig is not null)
+        {
+            return botsConfig;
+        }
+
+        if (Config is not JsonObject config)
+        {
+            return null;
+        }
+
+        botsConfig = new JsonObject();
+        config["bots"] = botsConfig;
+
+        return botsConfig;
+    }
+
+    // Scales a bot's current health by the multiplier for its category and stores the result as a
+    // normal config entry. The multiplier is only used to work out these numbers - it is never
+    // applied to the database itself.
+    private List<string> SeedMissingBots(JsonObject botsConfig, Dictionary<string, BotType?> botTypes)
+    {
+        var bossMultiplier = GetConfigNumber("bossMultiplier", 1);
+        var followerMultiplier = GetConfigNumber("followerMultiplier", 1);
+        var commonMultiplier = GetConfigNumber("commonMultiplier", 1);
+
+        var configuredBots = new HashSet<string>(
+            botsConfig.Select(entry => entry.Key),
+            StringComparer.OrdinalIgnoreCase);
+
+        var seededBots = new List<string>();
+
+        foreach (var (botKey, bot) in botTypes)
+        {
+            if (string.IsNullOrWhiteSpace(botKey) || configuredBots.Contains(botKey))
+            {
+                continue;
+            }
+
+            var bodyPart = bot?.BotHealth?.BodyParts?.FirstOrDefault();
+            if (bodyPart is null)
+            {
+                continue;
+            }
+
+            var multiplier = botKey.Contains("boss", StringComparison.OrdinalIgnoreCase)
+                ? bossMultiplier
+                : botKey.Contains("follower", StringComparison.OrdinalIgnoreCase)
+                    ? followerMultiplier
+                    : commonMultiplier;
+
+            var entry = BuildBotHealthEntry(bodyPart, multiplier);
+            if (entry is null)
+            {
+                continue;
+            }
+
+            botsConfig[botKey] = entry;
+            seededBots.Add(botKey);
+        }
+
+        return seededBots;
+    }
+
+    private static JsonObject? BuildBotHealthEntry(BodyPart bodyPart, double multiplier)
+    {
+        var head = ScaleBotPart(bodyPart, "Head", multiplier);
+        var chest = ScaleBotPart(bodyPart, "Chest", multiplier);
+        var stomach = ScaleBotPart(bodyPart, "Stomach", multiplier);
+        var arm = ScaleBotPart(bodyPart, "LeftArm", multiplier);
+        var leg = ScaleBotPart(bodyPart, "LeftLeg", multiplier);
+
+        if (head is null || chest is null || stomach is null || arm is null || leg is null)
+        {
+            return null;
+        }
+
+        return new JsonObject
+        {
+            ["head"] = head.Value,
+            ["chest"] = chest.Value,
+            ["stomach"] = stomach.Value,
+            ["arm"] = arm.Value,
+            ["leg"] = leg.Value
+        };
+    }
+
+    private static double? ScaleBotPart(BodyPart bodyPart, string partName, double multiplier)
+    {
+        var part = GetBotPart(bodyPart, partName);
+
+        return part is null ? null : Math.Round(part.Max * multiplier);
     }
 
     private static void SetTypeHealthConfig(BotTypeHealth health, JsonObject config)
@@ -153,30 +244,6 @@ public sealed class HealthManager : AbstractModManager
         }
     }
 
-    private static void SetTypeHealthMult(BotTypeHealth health, double multiplier)
-    {
-        if (health.BodyParts is null)
-        {
-            return;
-        }
-
-        foreach (var part in health.BodyParts)
-        {
-            if (part is null)
-            {
-                continue;
-            }
-
-            MultiplyBotPart(part, "Head", multiplier);
-            MultiplyBotPart(part, "Chest", multiplier);
-            MultiplyBotPart(part, "Stomach", multiplier);
-            MultiplyBotPart(part, "LeftArm", multiplier);
-            MultiplyBotPart(part, "RightArm", multiplier);
-            MultiplyBotPart(part, "LeftLeg", multiplier);
-            MultiplyBotPart(part, "RightLeg", multiplier);
-        }
-    }
-
     private static void SetBotPart(BodyPart bodyPart, string partName, JsonNode? valueNode)
     {
         var value = GetNumberValue(valueNode);
@@ -193,18 +260,6 @@ public sealed class HealthManager : AbstractModManager
 
         part.Max = value.Value;
         part.Min = value.Value;
-    }
-
-    private static void MultiplyBotPart(BodyPart bodyPart, string partName, double multiplier)
-    {
-        var part = GetBotPart(bodyPart, partName);
-        if (part is null)
-        {
-            return;
-        }
-
-        part.Max *= multiplier;
-        part.Min *= multiplier;
     }
 
     private static MinMax<double>? GetBotPart(BodyPart bodyPart, string partName)

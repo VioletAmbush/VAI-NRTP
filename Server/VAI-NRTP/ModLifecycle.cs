@@ -36,3 +36,18 @@ public class PostSptEntry(ModManager manager) : IOnLoad
         return Task.CompletedTask;
     }
 }
+
+// IOnLoad hooks run in TypePriority order across every mod, not per mod, and mods are free to
+// pick any priority they like. A priority this far out (well past OnLoadOrder.PostLoad) is last
+// by construction rather than by out-guessing other mods, while still running before the web
+// server accepts requests.
+[Injectable(TypePriority = int.MaxValue / 2)]
+public class FinalEntry(ModManager manager) : IOnLoad
+{
+    public Task OnLoadAsync(CancellationToken cancellationToken)
+    {
+        cancellationToken.ThrowIfCancellationRequested();
+        manager.FinalLoad();
+        return Task.CompletedTask;
+    }
+}
