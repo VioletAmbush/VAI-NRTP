@@ -6,16 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <OutputType>Library</OutputType>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <!-- Match SPT mod example output layout -->
     <OutputPath>bin\$(Configuration)\$(ProjectName)\$(AssemblyName)\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SPTarkov.Common" Version="4.1.0" />
-    <PackageReference Include="SPTarkov.DI" Version="4.1.0" />
-    <PackageReference Include="SPTarkov.Server.Core" Version="4.1.0" />
+    <PackageReference Include="SPTarkov.Common" Version="4.1.2" />
+    <PackageReference Include="SPTarkov.DI" Version="4.1.2" />
+    <PackageReference Include="SPTarkov.Server.Core" Version="4.1.2" />
   </ItemGroup>
 
 </Project>

@@ -4,31 +4,34 @@ using SPTarkov.Server.Core.Models.Spt.Mod;
 
 namespace VAI.NRTP;
 
-[Injectable(TypePriority = OnLoadOrder.Preload)]
+[Injectable(TypePriority = OnLoadOrder.Preload + 1)]
 public class PreSptEntry(ModManager manager) : IOnLoad
 {
     public Task OnLoadAsync(CancellationToken cancellationToken)
     {
+        cancellationToken.ThrowIfCancellationRequested();
         manager.PreSptLoad();
         return Task.CompletedTask;
     }
 }
 
-[Injectable(TypePriority = OnLoadOrder.PostLoad + 1)]
+[Injectable(TypePriority = OnLoadOrder.Preload + 2)]
 public class PostDbEntry(ModManager manager) : IOnLoad
 {
     public Task OnLoadAsync(CancellationToken cancellationToken)
     {
+        cancellationToken.ThrowIfCancellationRequested();
         manager.PostDbLoad();
         return Task.CompletedTask;
     }
 }
 
-[Injectable(TypePriority = OnLoadOrder.PostLoad + 2)]
+[Injectable(TypePriority = OnLoadOrder.PostLoad + 1)]
 public class PostSptEntry(ModManager manager) : IOnLoad
 {
     public Task OnLoadAsync(CancellationToken cancellationToken)
     {
+        cancellationToken.ThrowIfCancellationRequested();
         manager.PostSptLoad();
         return Task.CompletedTask;
     }
@@ -43,6 +46,7 @@ public class FinalEntry(ModManager manager) : IOnLoad
 {
     public Task OnLoadAsync(CancellationToken cancellationToken)
     {
+        cancellationToken.ThrowIfCancellationRequested();
         manager.FinalLoad();
         return Task.CompletedTask;
     }

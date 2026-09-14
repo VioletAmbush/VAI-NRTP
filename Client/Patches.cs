@@ -4,14 +4,14 @@ using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using static TarkovRPG.ConfigRepository;
+using static TapkovRPG.ConfigRepository;
 using System.Text;
 using JsonType;
 using UnityEngine;
 using EFT.HealthSystem;
 using EFT.InventoryLogic;
 
-namespace TarkovRPG
+namespace TapkovRPG
 {
     public static class Patches
     {
@@ -133,7 +133,8 @@ namespace TarkovRPG
                 __4,
                 __5,
                 __3,
-                null);
+                null,
+                false);
 
 #if DEBUG
             plugin.Logger.LogInfo($"{weapon.Template.Name} {weapon.WeapClass} Bang! Damage (x{damageMult:F1}): {damage:F0}");
@@ -264,7 +265,6 @@ namespace TarkovRPG
         [HarmonyPostfix]
         private static void ApplyShot(
             Player __instance,
-			PlayerHitInfo? __result,
             DamageInfo __0,
             EBodyPart __1,
 			EBodyPartColliderType __2,
@@ -318,7 +318,7 @@ namespace TarkovRPG
 #endif
         }
 
-        [HarmonyPatch(typeof(JsonType.TaxonomyColorExtension), "ToColor")]
+        [HarmonyPatch(typeof(TaxonomyColorExtension), "ToColor")]
         [HarmonyPostfix]
         private static void ToColor(
             ref UnityEngine.Color __result,
