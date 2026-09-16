@@ -1,4 +1,4 @@
-## VAI: Non-Realistic Tarkov Project
+## VAI: Non-Realistic Tapkov Project
 
  
 In general - this mod aims to make SPT more fun experience by sacrificing its realistic nature.
