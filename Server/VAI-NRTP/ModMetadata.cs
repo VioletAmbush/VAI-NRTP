@@ -8,7 +8,7 @@ public record ModMetadata : IModMetadata
     public string ModGuid { get; init; } = "com.vai.nrtp";
     public string Name { get; init; } = "VAI-NRTP";
     public string Author { get; init; } = "VioletAmbush, Incurso";
-    public List<string>? Contributors { get; init; }
+    public List<string>? Contributors { get; init; } = ["awnova"];
     public SemanticVersioning.Version Version { get; init; } = new("1.1.2");
     public SemanticVersioning.Range SptVersion { get; init; } = new("~4.1.0");
     public bool HasPrepatcher { get; init; }
