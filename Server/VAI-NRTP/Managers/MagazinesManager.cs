@@ -69,9 +69,9 @@ public sealed class MagazinesManager : AbstractModManager
             }
         }
 
-        if (loadUnloadModifier < -70)
+        if (loadUnloadModifier < -50)
         {
-            loadUnloadModifier = -70;
+            loadUnloadModifier = -50;
         }
 
         props.LoadUnloadModifier = loadUnloadModifier;

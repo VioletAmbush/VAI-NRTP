@@ -72,4 +72,12 @@ public sealed class ModManager
             manager.PostSptLoad();
         }
     }
+
+    public void FinalLoad()
+    {
+        foreach (var manager in _managers)
+        {
+            manager.FinalLoad();
+        }
+    }
 }

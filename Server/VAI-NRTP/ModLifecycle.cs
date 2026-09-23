@@ -36,3 +36,16 @@ public class PostSptEntry(ModManager manager) : IOnLoad
         return Task.CompletedTask;
     }
 }
+
+// Late bot discovery approach contributed by awnova:
+// https://github.com/awnova/VAI-NRTP
+[Injectable(TypePriority = int.MaxValue)]
+public class FinalEntry(ModManager manager) : IOnLoad
+{
+    public Task OnLoadAsync(CancellationToken cancellationToken)
+    {
+        cancellationToken.ThrowIfCancellationRequested();
+        manager.FinalLoad();
+        return Task.CompletedTask;
+    }
+}

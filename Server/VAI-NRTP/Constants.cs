@@ -7,6 +7,10 @@ public static class Constants
 {
     public static string ModTitle = "VAI-NRTP";
 
+#if DEBUG
+    public static bool DebugPrintBotHealthConfig = true;
+#endif
+
     public static ModContext GetDatabaseTables() => ModContext.Current;
 
     public static JsonUtil GetJsonUtil() => ModContext.Current.JsonUtil;

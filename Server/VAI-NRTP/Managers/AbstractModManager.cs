@@ -56,6 +56,20 @@ public abstract class AbstractModManager
         AfterPostSpt();
     }
 
+    public void FinalLoad()
+    {
+        EnsurePreSptInitialized();
+
+        if (!IsEnabled())
+        {
+            return;
+        }
+
+        EnsurePostDbInitialized();
+        EnsurePostSptInitialized();
+        AfterFinal();
+    }
+
     protected virtual void PreSptInitialize()
     {
         Config = LoadConfig(ConfigName);
@@ -83,6 +97,10 @@ public abstract class AbstractModManager
     }
 
     protected virtual void AfterPostSpt()
+    {
+    }
+
+    protected virtual void AfterFinal()
     {
     }
 

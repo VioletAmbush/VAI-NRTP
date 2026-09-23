@@ -8,7 +8,7 @@
     <BepInExPluginGuid>com.vai.nrtp</BepInExPluginGuid>
     <BepInExPluginName>VAI-NRTP</BepInExPluginName>
     <Authors>VioletAmbush, Incurso</Authors>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>

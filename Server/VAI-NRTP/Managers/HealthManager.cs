@@ -1,3 +1,4 @@
+using System.Text.Json;
 using System.Text.Json.Nodes;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.Models.Common;
@@ -12,10 +13,23 @@ public sealed class HealthManager : AbstractModManager
 
     protected override void AfterPostDb()
     {
-        SetBotsHealth();
         SetPlayerHealth();
 
-        Constants.GetLogger().Info($"{Constants.ModTitle}: Health changes applied!");
+        Constants.GetLogger().Info($"{Constants.ModTitle}: Player health changes applied!");
+    }
+
+    protected override void AfterFinal()
+    {
+        SetBotsHealth();
+
+        Constants.GetLogger().Info($"{Constants.ModTitle}: Bot health changes applied!");
+
+#if DEBUG
+        if (Constants.DebugPrintBotHealthConfig)
+        {
+            PrintBotHealthConfig();
+        }
+#endif
     }
 
     private void SetPlayerHealth()
@@ -80,11 +94,6 @@ public sealed class HealthManager : AbstractModManager
         {
             foreach (var (botKey, botNode) in botsConfig)
             {
-                if (botNode is not JsonObject botConfig)
-                {
-                    continue;
-                }
-
                 if (!TryGetBotType(botTypes, botKey, out var bot))
                 {
                     continue;
@@ -96,8 +105,10 @@ public sealed class HealthManager : AbstractModManager
                     continue;
                 }
 
-                SetTypeHealthConfig(health, botConfig);
-                configuredBots.Add(botKey);
+                if (SetTypeHealthConfig(health, botNode))
+                {
+                    configuredBots.Add(botKey);
+                }
             }
         }
 
@@ -129,16 +140,82 @@ public sealed class HealthManager : AbstractModManager
         }
     }
 
-    private static void SetTypeHealthConfig(BotTypeHealth health, JsonObject config)
+    private void PrintBotHealthConfig()
     {
-        if (health.BodyParts is null)
+        var botTypes = DatabaseTables.Bots?.Types;
+        if (botTypes is null)
         {
             return;
         }
 
+        var dump = new JsonObject();
+
+        foreach (var (botKey, bot) in botTypes.OrderBy(entry => entry.Key, StringComparer.OrdinalIgnoreCase))
+        {
+            var bodyParts = bot?.BotHealth?.BodyParts;
+            if (string.IsNullOrWhiteSpace(botKey) || bodyParts is null)
+            {
+                continue;
+            }
+
+            var profiles = new JsonArray();
+            foreach (var bodyPart in bodyParts)
+            {
+                if (bodyPart is not null)
+                {
+                    profiles.Add(BuildBotHealthConfig(bodyPart));
+                }
+            }
+
+            if (profiles.Count > 0)
+            {
+                dump[botKey] = profiles;
+            }
+        }
+
+        var options = new JsonSerializerOptions
+        {
+            WriteIndented = true,
+            IndentSize = 4
+        };
+
+        Constants.GetLogger().Info(
+            $"{Constants.ModTitle}: Bot health config dump; copy this object as the value of HealthConfig.bots:\n{dump.ToJsonString(options)}");
+    }
+
+    private static JsonObject BuildBotHealthConfig(BodyPart bodyPart)
+    {
+        return new JsonObject
+        {
+            ["head"] = JsonValue.Create(bodyPart.Head?.Max),
+            ["chest"] = JsonValue.Create(bodyPart.Chest?.Max),
+            ["stomach"] = JsonValue.Create(bodyPart.Stomach?.Max),
+            ["arm"] = JsonValue.Create(bodyPart.LeftArm?.Max),
+            ["leg"] = JsonValue.Create(bodyPart.LeftLeg?.Max)
+        };
+    }
+
+    private static bool SetTypeHealthConfig(BotTypeHealth health, JsonNode? configNode)
+    {
+        if (health.BodyParts is null)
+        {
+            return false;
+        }
+
+        var applied = false;
+        var profileIndex = 0;
+
         foreach (var part in health.BodyParts)
         {
             if (part is null)
+            {
+                profileIndex++;
+                continue;
+            }
+
+            var config = GetBotHealthConfig(configNode, profileIndex);
+            profileIndex++;
+            if (config is null)
             {
                 continue;
             }
@@ -150,7 +227,25 @@ public sealed class HealthManager : AbstractModManager
             SetBotPart(part, "RightArm", config["arm"]);
             SetBotPart(part, "LeftLeg", config["leg"]);
             SetBotPart(part, "RightLeg", config["leg"]);
+            applied = true;
         }
+
+        return applied;
+    }
+
+    private static JsonObject? GetBotHealthConfig(JsonNode? configNode, int profileIndex)
+    {
+        if (configNode is JsonObject legacyConfig)
+        {
+            return legacyConfig;
+        }
+
+        if (configNode is not JsonArray configs || configs.Count == 0)
+        {
+            return null;
+        }
+
+        return configs[Math.Min(profileIndex, configs.Count - 1)] as JsonObject;
     }
 
     private static void SetTypeHealthMult(BotTypeHealth health, double multiplier)
